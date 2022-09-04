@@ -1,19 +1,16 @@
 import React from 'react';
 import DialogItem from './DialogItem/DialogItem'
 import Message from './Message/Message'
+import { addMessageActionCreator, updateNewMessageTextActionCreator } from '../../State/messagesReducer'
+
 
 const Messages = props => {
+
 	const dialogNames = props.state.dialogData.map(el => <DialogItem id={el.id} key={el.id} name={el.name} />),
 		dialogMessages = props.state.messageData.map(el => <Message msg={el.message} key={el.id} />),
-		newMsg = React.createRef(),
 
-		onLetterMsgChange = () => {
-			const text = newMsg.current.value;
-			props.dispatch({ type: 'UPDATE-NEW-MESSAGE-TEXT', newText: text });
-		},
-		addMsg = () => {
-			props.dispatch({ type: 'ADD-MESSAGE' });
-		};
+		onLetterMsgChange = e => props.dispatch(updateNewMessageTextActionCreator(e.target.value)),
+		addMsg = () => props.dispatch(addMessageActionCreator());
 
 	return (
 		<section className='section__messages'>
@@ -25,8 +22,7 @@ const Messages = props => {
 					{dialogMessages}
 				</div>
 				<div className='send__msg-wrapper'>
-					<textarea className='text__area-msg' onChange={onLetterMsgChange}
-						ref={newMsg} value={props.state.newMessageText} />
+					<textarea className='text__area-msg' onChange={onLetterMsgChange} value={props.state.newMessageText} />
 					<button className='btn__send-msg' onClick={addMsg}>
 						<span className='test'></span></button>
 				</div>
