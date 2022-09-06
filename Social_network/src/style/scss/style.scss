@@ -14,9 +14,9 @@ body {
 .header {
 	background-color: #f2f8fd;
 	margin-bottom: 10px;
-	.flex__logo-input {
+	.header__grid {
 		display: grid;
-		grid-template-columns: 2fr 10fr;
+		grid-template-columns: 2fr 9fr 1fr;
 		gap: 10px;
 		align-items: center;
 	}
@@ -62,6 +62,16 @@ body {
 		border-radius: 10px 0 0 1px;
 		&:focus::placeholder {
 			color: #fff;
+		}
+	}
+
+	.header__ava {
+		text-align: center;
+		> img {
+			max-width: 100%;
+			width: 40px;
+			height: 40px;
+			border-radius: 50px;
 		}
 	}
 }
@@ -139,14 +149,48 @@ body {
 			padding-left: 10px;
 		}
 		.my__posts {
-			> h3 {
-				padding-top: 10px;
-				margin-bottom: 10px;
-			}
-			.post__buttons {
-				.btn__add-post {
-					margin-right: 10px;
-					margin-bottom: 20px;
+			.create__post {
+				padding: 5px;
+				background-color: #908282;
+				max-width: 400px;
+				margin-bottom: 20px;
+				> h3 {
+					padding-top: 10px;
+					margin-bottom: 10px;
+				}
+				.post__area {
+					padding: 7px 10px;
+					width: 100%;
+					height: 80px;
+					border-radius: 10px;
+					resize: none;
+				}
+				.post__buttons {
+					display: grid;
+					grid-template-columns: 5fr 7fr;
+					gap: 10px;
+					padding-bottom: 10px;
+					.posts_secondary__buttons {
+						display: flex;
+						justify-content: space-around;
+						align-items: center;
+						> .secondarry__button {
+							width: 20px;
+							height: 20px;
+							border-radius: 50px;
+							background-color: red;
+						}
+					}
+					.btn__add-post-wrapper {
+						text-align: end;
+						.btn__add-post {
+							padding: 8px 30px;
+							border-radius: 25px;
+							font-weight: 500;
+							font-size: 1rem;
+							background-color: #7986cb;
+						}
+					}
 				}
 			}
 			.post {

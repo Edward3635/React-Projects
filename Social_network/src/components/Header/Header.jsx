@@ -5,9 +5,10 @@ import Logo from './Logo/Logo';
 const Header = () => {
 	return (
 		<header className='header'>
-			<div className='flex__logo-input'>
+			<div className='header__grid'>
 				<Logo />
 				<InputSearch />
+				<div className='header__ava'><img className='img_ava' src={require('../../img/ava.jpg')} alt="avatar" /> </div>
 			</div>
 		</header>
 	)

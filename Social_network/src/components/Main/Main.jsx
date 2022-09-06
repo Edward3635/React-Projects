@@ -8,9 +8,9 @@ const Main = props => {
 	return (
 		<BrowserRouter>
 			<main className='main'>
-				<Navigation state={props.state.sideBarFriends} />
+				<Navigation state={props.store.getState().sideBarFriends} />
 				<div className='main__content'>
-					<MainRoutes state={props.state} dispatch={props.dispatch} />
+					<MainRoutes store={props.store} />
 				</div>
 			</main>
 		</BrowserRouter>
