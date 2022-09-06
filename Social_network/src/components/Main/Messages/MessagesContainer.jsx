@@ -1,14 +1,23 @@
 import React from 'react';
 import { addMessageActionCreator, updateNewMessageTextActionCreator } from '../../State/messagesReducer'
 import Messages from './Messages';
+import StoreContext from '../../../StoreContext';
 
 
-const MessagesContainer = props => {
-	const state = props.store.getState(),
-		onLetterMsgChange = value => props.store.dispatch(updateNewMessageTextActionCreator(value)),
-		addMsg = () => props.store.dispatch(addMessageActionCreator());
+const MessagesContainer = () => {
 
-	return <Messages addMsg={addMsg} updateNewMessageText={onLetterMsgChange} state={state.messagesPage} />;
+	return <StoreContext.Consumer>
+		{
+			(store) => {
+				let state = store.getState(),
+					onLetterMsgChange = value => store.dispatch(updateNewMessageTextActionCreator(value)),
+					addMsg = () => store.dispatch(addMessageActionCreator());
+				return <Messages addMsg={addMsg} updateNewMessageText={onLetterMsgChange} state={state.messagesPage} />
+
+			}
+		}
+	</StoreContext.Consumer>
+
 };
 
 export default MessagesContainer;

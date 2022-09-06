@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import NavFriends from './NavFriends/NavFriends';
 
 const Navigation = props => {
-	let sideBarFriends = props.state
+	let sideBarFriends = props.store
 		//.sort(() => Math.random() - 0.5)
 		.slice(0, 3)
 		.map(el => <NavFriends imgNumber={el.id} name={el.name} key={el.id} />);

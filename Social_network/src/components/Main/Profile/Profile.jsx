@@ -3,7 +3,7 @@ import MyPostsContainer from './MyPosts/MyPostsContainer';
 
 
 
-const Profile = props => {
+const Profile = () => {
 
 	return (
 		<section className='section__profile'>
@@ -12,7 +12,7 @@ const Profile = props => {
 			</div>
 			<div className='profile__content'>
 				Ava + description
-				<MyPostsContainer store={props.store} />
+				<MyPostsContainer />
 			</div>
 		</section>
 	);

@@ -4,13 +4,13 @@ import { BrowserRouter } from 'react-router-dom';
 import MainRoutes from './MainRoutes';
 
 
-const Main = props => {
+const Main = (props) => {
 	return (
 		<BrowserRouter>
 			<main className='main'>
-				<Navigation state={props.store.getState().sideBarFriends} />
+				<Navigation store={props.store.getState().sideBarFriends} />
 				<div className='main__content'>
-					<MainRoutes store={props.store} />
+					<MainRoutes />
 				</div>
 			</main>
 		</BrowserRouter>
