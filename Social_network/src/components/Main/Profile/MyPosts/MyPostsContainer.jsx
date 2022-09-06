@@ -6,16 +6,16 @@ import StoreContext from '../../../../StoreContext';
 
 const MyPostsContainer = () => {
 
-	return <StoreContext.Consumer>
+	return (<StoreContext.Consumer>
 		{
 			(store) => {
-				let state = store.getState(),
+				const state = store.getState(),
 					onPostChange = value => store.dispatch(updateNewPostTextActionCreator(value)),
 					addPost = () => store.dispatch(addPostActionCreator());
-				return <MyPosts state={state.profilePage} updateNewPostText={onPostChange} addPost={addPost} />
+				return (<MyPosts state={state.profilePage} updateNewPostText={onPostChange} addPost={addPost} />);
 			}
 		}
-	</StoreContext.Consumer>
+	</StoreContext.Consumer>);
 
 };
 export default MyPostsContainer;

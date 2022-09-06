@@ -2,11 +2,11 @@ import React from 'react';
 import Header from './Header/Header';
 import Main from './Main/Main';
 
-const App = function (props) {
+const App = function () {
 	return (
 		<div className='app-wrapper'>
 			<Header />
-			<Main store={props.store} />
+			<Main />
 		</div>
 	)
 };

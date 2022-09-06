@@ -1,18 +1,17 @@
 import React from 'react';
 import Navigation from './Navigation';
-import storeContext from '../../../storeContext';
+import StoreContext from '../../../StoreContext';
 
 const NavigationContainer = () => {
-
+	// {props.store.getState().sideBarFriends}
 	return (
-		<storeContext.Consumer>
+		<StoreContext.Consumer>
 			{
 				(store) => {
-					console.log(store.getState);
-					return (<Navigation state={store.getState().sideBarFriends} />);
+					return (<Navigation store={store.getState().sideBarFriends} />);
 				}
 			}
-		</storeContext.Consumer>
+		</StoreContext.Consumer>
 	);
 };
 

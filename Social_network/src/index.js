@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const rerenderEntireTree = () => {
 	root.render(
 		<Provider store={store}>
-			<App store={store} />
+			<App />
 		</Provider>
 	)
 };

@@ -6,7 +6,6 @@ const MyPosts = props => {
 
 	const posts = props.state.postData.map(el => <Post msg={el.msg} key={el.id} likesCount={el.likesCount} />),
 
-		//onPostChange = e => props.dispatch(updateNewPostTextActionCreator(e.target.value)),
 		onPostChange = e => props.updateNewPostText(e.target.value),
 		onAddPost = () => props.addPost();
 

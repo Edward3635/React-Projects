@@ -8,8 +8,17 @@ const Messages = props => {
 	const dialogNames = props.state.dialogData.map(el => <DialogItem id={el.id} key={el.id} name={el.name} />),
 		dialogMessages = props.state.messageData.map(el => <Message msg={el.message} key={el.id} />),
 
-		onLetterMsgChange = e => props.updateNewMessageText(e.target.value),
-		onAddMsg = () => props.addMsg();
+		onAddMsg = () => props.addMsg(),
+		onLetterMsgChange = e => {
+			let value = e.target.value
+			props.updateNewMessageText(value)
+			window.onkeypress = (e) => {
+				if (e.key === 'Enter' && e.shiftKey) return;
+				if (e.key === 'Enter') e.preventDefault();
+				if (e.key === 'Enter' && e.target.value.replace(/^\s+|\s+$/g, "")) props.addMsg();
+			};
+		};
+
 
 	return (
 		<section className='section__messages'>

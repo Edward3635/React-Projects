@@ -1,6 +1,8 @@
 import React from 'react';
 
 const StoreContext = React.createContext(null);
+export default StoreContext;
+
 export const Provider = props => {
 	return (
 		<StoreContext.Provider value={props.store}>
@@ -8,4 +10,3 @@ export const Provider = props => {
 		</StoreContext.Provider>
 	);
 };
-export default StoreContext;

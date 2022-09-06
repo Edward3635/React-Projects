@@ -1,14 +1,14 @@
 import React from 'react';
-import Navigation from './Navigation/Navigation';
 import { BrowserRouter } from 'react-router-dom';
 import MainRoutes from './MainRoutes';
+import NavigationContainer from './Navigation/NavigationContainer';
 
 
-const Main = (props) => {
+const Main = () => {
 	return (
 		<BrowserRouter>
 			<main className='main'>
-				<Navigation store={props.store.getState().sideBarFriends} />
+				<NavigationContainer/>
 				<div className='main__content'>
 					<MainRoutes />
 				</div>
