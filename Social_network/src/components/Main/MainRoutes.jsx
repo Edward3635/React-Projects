@@ -6,7 +6,7 @@ import MessagesContainer from './Messages/MessagesContainer';
 import News from './News/News';
 import Music from './Music/Music';
 import Settings from './Settings/Settings';
-import Friends from './Friends/Friends';
+import FriendsContainer from './Friends/FriendsContainer';
 
 
 const MainRoutes = () => {
@@ -17,7 +17,7 @@ const MainRoutes = () => {
 			<Route path='/news' element={<News />} />
 			<Route path='/music' element={<Music />} />
 			<Route path='/settings' element={<Settings />} />
-			<Route path='/friends' element={<Friends />} />
+			<Route path='/friends' element={<FriendsContainer />} />
 		</Routes>
 	);
 };

@@ -1,20 +1,16 @@
 import './style/css/style.css';
-import store from './components/State/reduxStore';
+import store from './components/redux/reduxStore';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './components/App';
 import './style/css/style.css';
-import { Provider } from './StoreContext';
+import { Provider } from 'react-redux';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const rerenderEntireTree = () => {
-	root.render(
-		<Provider store={store}>
-			<App />
-		</Provider>
-	)
-};
-
-rerenderEntireTree();
-store.subscribe(() => rerenderEntireTree());
+root.render(
+	<Provider store={store}>
+		<App />
+	</Provider>
+)

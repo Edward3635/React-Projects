@@ -1,18 +1,10 @@
-import React from 'react';
 import Navigation from './Navigation';
-import StoreContext from '../../../StoreContext';
+import { connect } from 'react-redux';
 
-const NavigationContainer = () => {
-	// {props.store.getState().sideBarFriends}
-	return (
-		<StoreContext.Consumer>
-			{
-				(store) => {
-					return (<Navigation store={store.getState().sideBarFriends} />);
-				}
-			}
-		</StoreContext.Consumer>
-	);
-};
-
+const mapStateToProps = state => {
+	return {
+		sideBarFriends: state.sideBarFriends
+	};
+},
+	NavigationContainer = connect(mapStateToProps)(Navigation);
 export default NavigationContainer;

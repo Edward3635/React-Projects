@@ -3,17 +3,23 @@ import Post from './Post/Post';
 
 
 const MyPosts = props => {
+	const posts = props.profilePage.postData.map(el => <Post msg={el.msg} key={el.id} likesCount={el.likesCount} />),
 
-	const posts = props.state.postData.map(el => <Post msg={el.msg} key={el.id} likesCount={el.likesCount} />),
+		onAddPost = () => props.addPost(),
+		onPostChange = e => props.onPostChange(e.target.value),
+		onEnterPress = e => {
+			if (e.key === 'Enter' && e.shiftKey) return;
+			if (e.key === 'Enter') e.preventDefault();
+			if (e.key === 'Enter' && e.target.value.replace(/^\s+|\s+$/g, "")) props.addPost();
 
-		onPostChange = e => props.updateNewPostText(e.target.value),
-		onAddPost = () => props.addPost();
+		};
 
 	return (
 		<div className='my__posts'>
 			<div className='create__post'>
 				<h3>My posts</h3>
-				<textarea className='post__area' onChange={onPostChange} value={props.state.newPostText} />
+				<textarea className='post__area' onChange={onPostChange} onKeyPress={onEnterPress}
+					value={props.profilePage.newPostText} />
 				<div className='post__buttons'>
 					<div className='posts_secondary__buttons'>
 						<button className='secondarry__button'></button>
