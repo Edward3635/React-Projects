@@ -267,4 +267,59 @@ body {
 			font-size: 0.8rem;
 		}
 	}
+	.section__users {
+		padding: 15px 0 0 30px;
+		.users__title {
+			margin-bottom: 15px;
+			margin-left: 30px;
+		}
+		.user__list {
+			.friends__page-user {
+				margin-bottom: 15px;
+				.user__body {
+					display: flex;
+					.user__follow-img {
+						text-align: -webkit-center;
+						.user__img {
+							padding-top: 10px;
+							max-width: 100px;
+							margin-bottom: 10px;
+							img {
+								border-radius: 50px;
+								max-width: 100%;
+							}
+						}
+					}
+					.user__info {
+						padding: 13px 20px;
+						margin: 0 auto;
+						flex-grow: 1;
+						max-width: 580px;
+						border-radius: 25px;
+						border: 3px solid gray;
+						display: flex;
+						justify-content: space-between;
+						.user__name-status {
+							display: flex;
+							flex-direction: column;
+							justify-content: space-between;
+						}
+						.user__location {
+							text-align: end;
+							.user__country {
+								margin-bottom: 10px;
+							}
+						}
+					}
+				}
+				.user__follow {
+					padding: 5px 15px;
+					border-radius: 20px;
+					letter-spacing: 2px;
+					font-weight: 500;
+					font-size: 1.4rem;
+				}
+			}
+		}
+	}
 }
