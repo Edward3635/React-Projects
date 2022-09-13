@@ -321,5 +321,14 @@ body {
 				}
 			}
 		}
+		.page__numbers {
+			.current__page-number {
+				font-weight: 600;
+			}
+			.page__number {
+				padding: 0 3px;
+				cursor: pointer;
+			}
+		}
 	}
 }

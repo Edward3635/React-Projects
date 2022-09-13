@@ -380,3 +380,10 @@ body {
   font-weight: 500;
   font-size: 1.4rem;
 }
+.main .section__users .page__numbers .current__page-number {
+  font-weight: 600;
+}
+.main .section__users .page__numbers .page__number {
+  padding: 0 3px;
+  cursor: pointer;
+}
