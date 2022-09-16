@@ -1,16 +1,18 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import Post from './Post/Post';
 
 
 const MyPosts = props => {
-	const posts = props.profilePage.postData.map(el => <Post msg={el.msg} key={el.id} likesCount={el.likesCount} />),
+	const dispatch = useDispatch(),
+		posts = props.profilePage.postData.map(el => <Post msg={el.msg} key={el.id} likesCount={el.likesCount} />),
 
-		onAddPost = () => props.addPost(),
-		onPostChange = e => props.onPostChange(e.target.value),
+		onAddPost = () => dispatch(props.addPost()),
+		onPostChange = e => dispatch(props.updateNewPostText(e.target.value)),
 		onEnterPress = e => {
 			if (e.key === 'Enter' && e.shiftKey) return;
 			if (e.key === 'Enter') e.preventDefault();
-			if (e.key === 'Enter' && e.target.value.replace(/^\s+|\s+$/g, "")) props.addPost();
+			if (e.key === 'Enter' && e.target.value.replace(/^\s+|\s+$/g, "")) dispatch(props.addPost());
 
 		};
 
