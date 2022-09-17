@@ -1,3 +1,4 @@
+import * as axios from 'axios';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
@@ -6,8 +7,37 @@ import userPhoto from '../../../../img/userPhoto.png';
 const User = props => {
 	const dispatch = useDispatch()
 	const toggleFollow = () => {
-		props.user.followed ? dispatch(props.onUnfollow(props.user.id)) :
-			dispatch(props.onFollow(props.user.id));
+		if (props.user.followed) {
+			axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${props.user.id}`,
+				{
+					withCredentials: true, headers:
+						{ 'API-KEY': '32d1f0e3-9564-4812-9fae-cd3caea18846' }
+				})
+				.then(response => {
+					// dispatch(toggleIsFetching(false));
+					// dispatch(setUsers(response.data.items));
+					// dispatch(setTotalUsersCount(response.data.totalCount));
+					if (response.data.resultCode === 0) {
+						dispatch(props.onUnfollow(props.user.id));
+					};
+				});
+		} else {
+			axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${props.user.id}`, {},
+				{
+					withCredentials: true, headers:
+						{ 'API-KEY': '32d1f0e3-9564-4812-9fae-cd3caea18846' }
+				})
+				.then(response => {
+					// dispatch(toggleIsFetching(false));
+					// dispatch(setUsers(response.data.items));
+					// dispatch(setTotalUsersCount(response.data.totalCount));
+					if (response.data.resultCode === 0) {
+						dispatch(props.onFollow(props.user.id));
+					};
+				});
+		}
+
+
 	};
 	return (
 		<li className='friends__page-user'>

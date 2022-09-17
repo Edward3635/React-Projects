@@ -13,20 +13,22 @@ const UsersContainer = () => {
 		currentPage = useSelector(state => state.friendsPage.currentPage),
 		isFetching = useSelector(state => state.friendsPage.isFetching),
 		dispatch = useDispatch();
-		
+
 	useEffect(() => {
 		dispatch(toggleIsFetching(true));
-		axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${currentPage
-			}&count=${pageSize}`)
+		axios
+			.get(`https://social-network.samuraijs.com/api/1.0/users?page=${currentPage}&count=${pageSize}`,
+				{ withCredentials: true })
 			.then(response => {
 				dispatch(toggleIsFetching(false));
 				dispatch(setUsers(response.data.items));
 				dispatch(setTotalUsersCount(response.data.totalCount));
 			});
-	}, [currentPage])
+	}, [pageSize, dispatch, currentPage]) //pageSize,dispatch можна видалити
 
 	const onPageChanged = (pageNumber) => {
 		dispatch(setCurrentPage(pageNumber))
+		window.scrollTo(0, 0)
 		// props.toggleIsFetching(true)
 		// props.setCurrentPage(pageNumber);
 		// axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${props.pageSize}`)

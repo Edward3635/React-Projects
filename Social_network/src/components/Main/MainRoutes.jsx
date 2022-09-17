@@ -12,7 +12,10 @@ import ProfileContainer from './Profile/ProfileContainer';
 const MainRoutes = () => {
 	return (
 		<Routes>
-			<Route path='/profile/*' element={<ProfileContainer />} />
+			<Route path='/profile' element={<ProfileContainer />}>
+				<Route path='/profile/:userId' element={<ProfileContainer />} />
+			</Route>
+
 			<Route path='/messages/*' element={<MessagesContainer />} />
 			<Route path='/news' element={<News />} />
 			<Route path='/music' element={<Music />} />

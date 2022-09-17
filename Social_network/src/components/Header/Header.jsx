@@ -1,14 +1,18 @@
 import React from 'react';
 import InputSearch from './InputSearch/InputSearch';
 import Logo from './Logo/Logo';
+import { NavLink } from 'react-router-dom';
 
-const Header = () => {
+const Header = props => {
 	return (
 		<header className='header'>
 			<div className='header__grid'>
 				<Logo />
 				<InputSearch />
-				<div className='header__ava'><img className='img_ava' src={require('../../img/ava.jpg')} alt="avatar" /> </div>
+				{props.isAuthorized ? <div className='header__ava'>
+					<img className='img_ava' src={require('../../img/ava.jpg')} alt="avatar" />
+				</div>
+					: <div className='header__login'><NavLink to='/login'>Sign Up</NavLink></div>}
 			</div>
 		</header>
 	)

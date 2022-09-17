@@ -1,10 +1,10 @@
 import Navigation from './Navigation';
-import {useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
-	const NavigationContainer = () => {
-		const sideBarFriends = useSelector(state => state.sideBarFriends)
-		return <Navigation sideBarFriends={sideBarFriends} />
-	};
+const NavigationContainer = () => {
+	const sideBarFriends = useSelector(state => state.sideBarFriends)
+	return <Navigation sideBarFriends={sideBarFriends} />
+};
 
 export default NavigationContainer;
 

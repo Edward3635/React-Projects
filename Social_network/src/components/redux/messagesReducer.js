@@ -28,10 +28,7 @@ const messagesReducer = (state = initialState, action) => {
 				newMessageText: ''
 			};
 
-		case 'UPDATE-NEW-MESSAGE-TEXT': return {
-			...state,
-			newMessageText: action.newText
-		};
+		case 'UPDATE-NEW-MESSAGE-TEXT': return { ...state, newMessageText: action.newText };
 
 
 		default: return state;

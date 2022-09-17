@@ -1,12 +1,15 @@
 import React from 'react';
-import Header from './Header/Header';
+import { BrowserRouter } from 'react-router-dom';
 import Main from './Main/Main';
+import HeaderContainer from './Header/HeaderContainer';
 
 const App = function () {
 	return (
 		<div className='app-wrapper'>
-			<Header />
-			<Main />
+			<BrowserRouter>
+				<HeaderContainer />
+				<Main />
+			</BrowserRouter>
 		</div>
 	)
 };

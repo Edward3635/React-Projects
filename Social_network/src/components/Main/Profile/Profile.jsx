@@ -11,7 +11,7 @@ const Profile = props => {
 				<img src={require('../../../img/banner.jpg')} alt="banner" />
 			</div>
 			<div className='profile__content'>
-				<ProfileInfo profile={props.profile} />
+				<ProfileInfo profile={props.profile} isFetching={props.isFetching} />
 				<MyPostsContainer />
 			</div>
 		</section>
