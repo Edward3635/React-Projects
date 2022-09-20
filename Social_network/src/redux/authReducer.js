@@ -1,3 +1,5 @@
+import { usersAPI } from "../api/api";
+
 const initialState = {
 	id: null,
 	email: null,
@@ -14,6 +16,14 @@ const authReducer = (state = initialState, action) => {
 };
 
 export default authReducer;
-
 export const setAuthUserData = data => ({ type: 'SET_USER_DATA', data });
 export const toggleIsFetching = isFetching => ({ type: 'TOGGLE_IS_FETCHING', isFetching });
+export const getAuthorization = () => {
+	return dispatch => {
+		usersAPI.getAuthorization().then(response => {
+			response.resultCode === 0 ? dispatch(setAuthUserData(response.data)) :
+				alert(response.messages.join());
+
+		});
+	}
+};

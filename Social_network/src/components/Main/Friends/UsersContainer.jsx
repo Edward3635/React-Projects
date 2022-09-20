@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import { follow, setCurrentPage, setTotalUsersCount, setUsers, toggleIsFetching, unfollow }
-	from '../../redux/usersReducer';
-import * as axios from 'axios'
+import { getUsers, setCurrentPage }
+	from '../../../redux/usersReducer';
 import Users from './Users';
 
 const UsersContainer = () => {
@@ -12,37 +11,39 @@ const UsersContainer = () => {
 		totalUsersCount = useSelector(state => state.friendsPage.totalUsersCount),
 		currentPage = useSelector(state => state.friendsPage.currentPage),
 		isFetching = useSelector(state => state.friendsPage.isFetching),
-		dispatch = useDispatch();
+		dispatch = useDispatch(),
 
-	useEffect(() => {
-		dispatch(toggleIsFetching(true));
-		axios
-			.get(`https://social-network.samuraijs.com/api/1.0/users?page=${currentPage}&count=${pageSize}`,
-				{ withCredentials: true })
-			.then(response => {
-				dispatch(toggleIsFetching(false));
-				dispatch(setUsers(response.data.items));
-				dispatch(setTotalUsersCount(response.data.totalCount));
-			});
-	}, [pageSize, dispatch, currentPage]) //pageSize,dispatch можна видалити
+		pagesCount = Math.ceil(totalUsersCount / pageSize),
+		pages = [...Array(pagesCount).keys()].map(x => ++x), //fill array 1 to pagesCount
 
-	const onPageChanged = (pageNumber) => {
-		dispatch(setCurrentPage(pageNumber))
-		window.scrollTo(0, 0)
-		// props.toggleIsFetching(true)
-		// props.setCurrentPage(pageNumber);
-		// axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${props.pageSize}`)
-		// 	.then(response => {
-		// 		props.toggleIsFetching(false);
-		// 		props.setUsers(response.data.items);
-		// 	});
-	};
+		onPageChanged = (pageNumber) => {
+			dispatch(setCurrentPage(pageNumber))
+			window.scrollTo(0, 0)
+		},
 
-	return <Users totalUsersCount={totalUsersCount} pageSize={pageSize}
-		currentPage={currentPage} onPageChanged={onPageChanged} usersData={usersData}
-		onFollow={follow} onUnfollow={unfollow} isFetching={isFetching} />
+		slicedPages = (currentPage) => {
+			const currentPageFirst = ((currentPage - 3) <= 0) ? 0 : currentPage - 3,
+				currentPageLast = ((currentPage - 3) <= 0) ? 5 : currentPage + 2;
+			// if (currentPage - 3 <= 0) {
+			// 	currentPageFirst = 0;
+			// 	currentPageLast = 5;
+			// } else {
+			// 	currentPageFirst = currentPage - 3;
+			// 	currentPageLast = currentPage + 2;
+			// }
 
+			return pages.slice(currentPageFirst, currentPageLast);
+		};
+
+	useEffect(() => (dispatch(getUsers(currentPage, pageSize))),
+		[currentPage, dispatch, pageSize]);
+
+
+	return <Users slicedPages={slicedPages} currentPage={currentPage} onPageChanged={onPageChanged}
+		usersData={usersData} isFetching={isFetching} />
 }
+
+export default UsersContainer;
 
 // const mapStateToProps = state => {
 // 	return {
@@ -69,4 +70,3 @@ const UsersContainer = () => {
 
 // export default connect(mapStateToProps,
 // 	{ follow, unfollow, setUsers, setCurrentPage, setTotalUsersCount, toggleIsFetching })(UsersContainer);
-export default UsersContainer;

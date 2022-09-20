@@ -1,4 +1,4 @@
-import { addPost, updateNewPostText } from '../../../redux/profileReducer'
+import { addPost, updateNewPostText } from '../../../../redux/profileReducer'
 import MyPosts from './MyPosts';
 import { useSelector } from 'react-redux';
 

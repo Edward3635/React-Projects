@@ -1,5 +1,5 @@
 import './style/css/style.css';
-import store from './components/redux/reduxStore';
+import store from './redux/reduxStore';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './components/App';
