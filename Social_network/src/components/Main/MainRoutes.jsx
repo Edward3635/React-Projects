@@ -7,7 +7,7 @@ import Music from './Music/Music';
 import Settings from './Settings/Settings';
 import UsersContainer from './Friends/UsersContainer';
 import ProfileContainer from './Profile/ProfileContainer';
-import Login from '../Login/Login';
+import SignIn from '../SignIn/SignIn';
 
 
 const MainRoutes = () => {
@@ -22,7 +22,7 @@ const MainRoutes = () => {
 			<Route path='/music' element={<Music />} />
 			<Route path='/settings' element={<Settings />} />
 			<Route path='/friends' element={<UsersContainer />} />
-			<Route path='/login' element={<Login/>} />
+			<Route path='/SignIn' element={<SignIn />} />
 		</Routes>
 	);
 };
