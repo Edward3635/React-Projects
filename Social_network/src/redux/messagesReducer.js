@@ -11,24 +11,18 @@ const initialState = {
 		{ id: 1, message: 'Hey!' },
 		{ id: 2, message: "What's up?" },
 		{ id: 3, message: 'Are you busy?' }
-	],
-	newMessageText: ''
+	]
 };
 
 const messagesReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case 'ADD-MESSAGE':
-			const newMessage = {
-				id: state.messageData.length + 1,
-				message: state.newMessageText
-			};
 			return {
 				...state,
-				messageData: [...state.messageData, newMessage],
-				newMessageText: ''
+				messageData: [...state.messageData, { id: state.messageData.length + 1, message: action.message }]
 			};
 
-		case 'UPDATE-NEW-MESSAGE-TEXT': return { ...state, newMessageText: action.newText };
+		// case 'UPDATE-NEW-MESSAGE-TEXT': return { ...state, newMessageText: action.newText };
 
 
 		default: return state;
@@ -37,6 +31,6 @@ const messagesReducer = (state = initialState, action) => {
 
 export default messagesReducer;
 
-export const addMessage = () => ({ type: 'ADD-MESSAGE' });
+export const addMessage = (message) => ({ type: 'ADD-MESSAGE', message });
 
-export const updateNewMessageText = (text) => ({ type: 'UPDATE-NEW-MESSAGE-TEXT', newText: text });
+// export const updateNewMessageText = (text) => ({ type: 'UPDATE-NEW-MESSAGE-TEXT', newText: text });

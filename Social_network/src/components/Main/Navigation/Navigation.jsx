@@ -1,12 +1,12 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import NavFriends from './NavFriends/NavFriends';
 
-const Navigation = props => {
-	let sideBarFriends = props.sideBarFriends
+const Navigation = () => {
+	const sideBarFriends = useSelector(state => state.sideBarFriends)
 		//.sort(() => Math.random() - 0.5)
-		.slice(0, 3)
-		.map(el => <NavFriends imgNumber={el.id} name={el.name} key={el.id} />);
+		.slice(0, 3).map(el => <NavFriends imgNumber={el.id} name={el.name} key={el.id} />);
 
 	return (
 		<nav className='main__nav'>

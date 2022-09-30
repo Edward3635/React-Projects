@@ -1,16 +1,16 @@
 import React from 'react';
 import MainRoutes from './MainRoutes';
-import NavigationContainer from './Navigation/NavigationContainer';
+import Navigation from './Navigation/Navigation';
 
 
 const Main = () => {
 	return (
-			<main className='main'>
-				<NavigationContainer/>
-				<div className='main__content'>
-					<MainRoutes />
-				</div>
-			</main>
+		<main className='main'>
+			<Navigation />
+			<div className='main__content'>
+				<MainRoutes />
+			</div>
+		</main>
 	)
 };
 export default Main;

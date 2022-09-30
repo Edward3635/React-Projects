@@ -20,6 +20,8 @@ export const usersAPI = {
 	followOnUser(userId) { return instance.post(`follow/${userId}`) },
 	unfollowFromUser(userId) { return instance.delete(`follow/${userId}`) },
 	getUserStatus(userId) { return instance.get(`profile/status/${userId}`) },
-	updateUserStatus(status) { return instance.put('profile/status', { status }) }
+	updateUserStatus(status) { return instance.put('profile/status', { status }) },
+	signIn(obj) { return instance.post('auth/login', obj) },
+	logout() { return instance.delete('auth/login') }
 
 }
