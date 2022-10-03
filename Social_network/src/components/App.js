@@ -10,9 +10,9 @@ const App = function () {
 	const dispatch = useDispatch(),
 		initialized = useSelector(state => state.app.initialized);
 	useEffect(() => (dispatch(initializeApp())));
-	
 
-	if (!initialized) return <Preloader />;
+
+	if (!initialized) return <Preloader divClass={'preloader__app'} />;
 	return (
 		<div className='app-wrapper'>
 			<BrowserRouter>

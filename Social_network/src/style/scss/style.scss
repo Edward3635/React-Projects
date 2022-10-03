@@ -78,6 +78,9 @@ body {
 			text-decoration: underline rgb(207, 101, 101);
 		}
 	}
+	&__logout {
+		cursor: pointer;
+	}
 }
 
 .main {
@@ -293,38 +296,44 @@ body {
 			border-radius: 60px;
 		}
 		.dialog {
-			color: #000;
+			color: #232;
 			font-size: 0.8rem;
 		}
 	}
 	.section__users {
-		padding: 20px 0 0 30px;
+		padding: 20px 30px 0;
+		.users__header {
+			display: grid;
+			grid-template-columns: 2.9fr 8.1fr;
+			margin-top: 4px;
+		}
 		.users__title {
-			margin-left: 20px;
+			text-align: center;
 		}
 
 		.user__list {
+			margin-bottom: 20px;
 			.friends__page-user {
 				&:not(:last-child) {
 					margin-bottom: 15px;
 				}
 				.user__body {
 					display: flex;
+					justify-content: space-evenly;
 					.user__follow-img {
 						text-align: -webkit-center;
 						.user__img {
 							padding-top: 10px;
 							max-width: 100px;
-							margin-bottom: 10px;
 							img {
 								border-radius: 50px;
 								max-width: 100%;
+								margin-bottom: 10px;
 							}
 						}
 					}
 					.user__info {
 						padding: 13px 20px;
-						margin: 0 auto;
 						flex-grow: 1;
 						max-width: 580px;
 						border-radius: 25px;
@@ -335,6 +344,10 @@ body {
 							display: flex;
 							flex-direction: column;
 							justify-content: space-between;
+							word-break: break-word;
+						}
+						.user__status {
+							word-break: break-word;
 						}
 						.user__location {
 							text-align: end;
@@ -355,13 +368,19 @@ body {
 		}
 		.page__numbers {
 			text-align: center;
-			margin-bottom: 15px;
-			.current__page-number {
-				font-weight: 600;
-			}
+			margin-bottom: 20px;
 			.page__number {
+				font-weight: 500;
 				padding: 0 3px;
 				cursor: pointer;
+				border: 2px solid lavenderblush;
+				&:not(:last-of-type) {
+					border-right: 0;
+				}
+			}
+			.current__page-number {
+				font-weight: 600;
+				color: darkcyan;
 			}
 		}
 	}
@@ -460,4 +479,10 @@ body {
 		margin-bottom: 10px;
 		text-align: center;
 	}
+}
+.preloader__app {
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	align-items: center;
 }

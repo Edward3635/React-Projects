@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { updateUserStatus } from '../../../../../redux/profileReducer';
 
-const ProfileStatus = props => {
+const ProfileStatus = () => {
 
 	const dispatch = useDispatch(),
 		status = useSelector(state => state.profilePage.status),
@@ -21,12 +21,10 @@ const ProfileStatus = props => {
 
 	return (
 		<div>
-			{editMode ? <span onDoubleClick={toggleEditMode} >
-				{changeStatus || 'Empty status'}
-			</span> :
+			{editMode ? <span onDoubleClick={toggleEditMode} >{changeStatus || 'Empty status'}</span> :
 				<div>
-					<input type='text' value={changeStatus} autoFocus
-						onBlur={toggleEditMode} onChange={onStatusChange} />
+					<input type='text' value={changeStatus} onBlur={toggleEditMode}
+						onChange={onStatusChange} autoFocus />
 				</div>}
 		</div>
 	);

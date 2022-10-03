@@ -21,25 +21,23 @@ export const setAuthUserData = data => ({ type: 'SET_USER_DATA', data });
 export const resetAuthUserData = () => ({ type: 'RESET_USER_DATA' });
 export const toggleIsFetching = isFetching => ({ type: 'TOGGLE_IS_FETCHING', isFetching });
 
-export const getAuthorization = () => dispatch => {
-	return usersAPI.getAuthorization().then(response => {
-		if (response.resultCode === 0) dispatch(setAuthUserData(response.data));
+export const getAuthorization = () => async dispatch => {
+	let response = await usersAPI.getAuthorization();
+	if (response.resultCode === 0) dispatch(setAuthUserData(response.data));
 
-	});
+
 };
-export const signIn = (obj, setStatus) => dispatch => {
+export const signIn = (obj, setStatus) => async dispatch => {
 	dispatch(toggleIsFetching(true));
-	usersAPI.signIn(obj).then(response => {
-		if (response.data.resultCode === 0) dispatch(getAuthorization())
-		else setStatus(response.data.messages)
-		dispatch(toggleIsFetching(false));
-	});
+	let response = await usersAPI.signIn(obj);
+	if (response.data.resultCode === 0) dispatch(getAuthorization())
+	else setStatus(response.data.messages)
+	dispatch(toggleIsFetching(false));
 };
-export const logout = () => dispatch => {
+export const logout = () => async dispatch => {
 
 	dispatch(toggleIsFetching(true));
-	usersAPI.logout().then(response => {
-		if (response.data.resultCode === 0) dispatch(resetAuthUserData());
-		dispatch(toggleIsFetching(false));
-	});
+	let response = await usersAPI.logout();
+	if (response.data.resultCode === 0) dispatch(resetAuthUserData());
+	dispatch(toggleIsFetching(false));
 };

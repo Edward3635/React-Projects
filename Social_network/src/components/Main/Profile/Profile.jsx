@@ -8,7 +8,6 @@ import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 
 const Profile = () => {
-
 	const dispatch = useDispatch(),
 		isAuthorized = useSelector(state => state.authorization.isAuthorized),
 		authorizedUser = useSelector(state => state.authorization.id);

@@ -31,14 +31,3 @@ const Messages = () => {
 };
 
 export default Messages;
-
-// Useless code
-// const mapStateToProps = state => ({ messagesPage: state.messagesPage }),
-// 	mapDispatchToProps = dispatch => {
-// 		return {
-// 			updateNewMessageText: value => (dispatch(updateNewMessageTextActionCreator(value))),
-// 			addMsg: () => (dispatch(addMessageActionCreator()))
-// 		};
-// 	},
-
-// 	MessagesContainer = connect(mapStateToProps, mapDispatchToProps)(Messages);

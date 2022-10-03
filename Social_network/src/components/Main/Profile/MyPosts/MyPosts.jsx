@@ -6,16 +6,9 @@ import SendPostForm from './SendPostForm/SendPostForm';
 
 
 const MyPosts = () => {
-	const profilePage = useSelector(state => state.profilePage),
-		posts = profilePage.postData.map(el => <Post msg={el.msg} key={el.id} likesCount={el.likesCount} />);
+	const profilePage = useSelector(state => state.profilePage.postData),
+		posts = profilePage.map(el => <Post msg={el.msg} key={el.id} likesCount={el.likesCount} />);
 
-
-	// onEnterPress = e => {
-	// 	if (e.key === 'Enter' && e.shiftKey) return;
-	// 	if (e.key === 'Enter') e.preventDefault();
-	// 	if (e.key === 'Enter' && e.target.value.replace(/^\s+|\s+$/g, "")) dispatch(addPost());
-
-	// };
 
 	return (
 		<div className='my__posts'>
@@ -28,12 +21,3 @@ const MyPosts = () => {
 	);
 };
 export default MyPosts;
-
-// const mapStateToProps = state => ({ profilePage: state.profilePage }),
-// 	mapDispatchToProps = dispatch => {
-// 		return {
-// 			onPostChange: value => dispatch(updateNewPostTextAC(value)),
-// 			addPost: () => dispatch(addPostAC())
-// 		};
-// 	},
-// 	MyPostsContainer = connect(mapStateToProps, mapDispatchToProps)(MyPosts);

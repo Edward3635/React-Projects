@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getUsers, setCurrentPage } from '../../../redux/usersReducer';
 import Preloader from '../../Common/Preloader/Preloader';
 import PageNumbers from './PageNumbers/PageNumbers';
-import UserContainer from './User/UserContainer';
+import User from './User/User';
 
 const Users = () => {
 
@@ -41,16 +41,18 @@ const Users = () => {
 
 	return (
 		<section className='section__users'>
-			<div className='users__title'>Users</div>
 			{isFetching ? <Preloader /> : null}
-			<PageNumbers slicedPages={slicedPages} onPageChanged={onPageChanged} currentPage={currentPage} />
+			<div className='users__header'>
+				<div className='users__title'>Users</div>
+				<PageNumbers slicedPages={slicedPages} onPageChanged={onPageChanged} currentPage={currentPage} />
+			</div>
 			<ul className='user__list'>
-				{usersData.map(user => <UserContainer key={user.id} user={user} />)}
+				{usersData.map(user => <User key={user.id} user={user} />)}
 			</ul>
 			<PageNumbers slicedPages={slicedPages} onPageChanged={onPageChanged} currentPage={currentPage} />
 		</section>);
 };
-export default Users
+export default Users;
 
 
 // const mapStateToProps = state => {

@@ -21,7 +21,7 @@ const Header = () => {
 				{isAuthorized ? <div className='header__ava'>
 					{/* <img className='img_ava' src={require('../../img/ava.jpg')} alt="avatar" /> */}
 					{login}
-					<div onClick={onLogout} >Logout</div>
+					<div className='header__logout' onClick={onLogout} >Logout</div>
 				</div>
 					: <div className='header__login'><NavLink to='/signIn'>Sign In</NavLink></div>}
 			</div>
