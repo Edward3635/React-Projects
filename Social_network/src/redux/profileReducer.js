@@ -22,6 +22,7 @@ const profileReducer = (state = initialState, action) => {
 		case 'SET_USER_PROFILE': return { ...state, profile: action.profile }
 		case 'TOGGLE_IS_FETCHING': return { ...state, isFetching: action.isFetching };
 		case 'SET_USER_STATUS': return { ...state, status: action.status };
+		case 'SAVE_AVATAR_SUCCESS': return { ...state, profile: { ...state.profile, photos: action.photos } };
 
 		default: return state;
 
@@ -35,6 +36,8 @@ export const removePost = id => ({ type: 'REMOVE_POST', id });
 export const setUserProfile = profile => ({ type: 'SET_USER_PROFILE', profile });
 export const toggleIsFetching = isFetching => ({ type: 'TOGGLE_IS_FETCHING', isFetching });
 export const setUserStatus = status => ({ type: 'SET_USER_STATUS', status });
+export const saveAvatarSuccess = photos => ({ type: 'SAVE_AVATAR_SUCCESS', photos });
+
 
 
 export const getUserProfile = (userId) => async dispatch => {
@@ -52,5 +55,12 @@ export const updateUserStatus = status => async dispatch => {
 	let response = await usersAPI.updateUserStatus(status);
 	if (response.data.resultCode === 0) {
 		dispatch(setUserStatus(status));
+	}
+};
+export const saveAvatar = file => async dispatch => {
+	let response = await usersAPI.saveAvatar(file);
+
+	if (response.data.resultCode === 0) {
+		dispatch(saveAvatarSuccess(response.data.data.photos))
 	}
 };

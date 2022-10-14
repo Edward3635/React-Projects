@@ -26,7 +26,6 @@ body {
 
 	.flex-form {
 		border-radius: 10px;
-		display: -webkit-box;
 		height: 37px;
 		display: flex;
 		position: relative;
@@ -36,7 +35,6 @@ body {
 			padding: 0 0 0 10px;
 			background: #fff;
 			font-size: 1rem;
-			-webkit-appearance: none;
 		}
 		input[type="submit"] {
 			border-radius: 0 1px 10px 0;
@@ -165,6 +163,42 @@ body {
 				display: flex;
 				gap: 15px;
 				margin-bottom: 40px;
+				.profile__avatar {
+					text-align: center;
+					position: relative;
+					cursor: pointer;
+					height: fit-content;
+					&:hover {
+						.label__file-avatar {
+							opacity: 1;
+							transition: all 0.45s;
+						}
+					}
+
+					> img {
+						margin-bottom: 15px;
+					}
+					.upload__avatar {
+						position: absolute;
+						left: 50%;
+						top: 80%;
+						transform: translate(-50%, -20%);
+						font-weight: 600;
+						font-size: 1.4rem;
+						color: gold;
+						cursor: pointer;
+					}
+					.label__file-avatar {
+						text-shadow: 3px 1px 3px black;
+						transition: 0.3s;
+						opacity: 0;
+						cursor: pointer;
+					}
+					.input__file-avatar {
+						visibility: hidden;
+						width: 0;
+					}
+				}
 				.profile__name {
 					padding-top: 15px;
 					margin-bottom: 15px;

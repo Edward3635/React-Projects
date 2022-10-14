@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import { updateUserStatus } from '../../../../../redux/profileReducer';
 
 const ProfileStatus = () => {
@@ -8,8 +9,10 @@ const ProfileStatus = () => {
 		status = useSelector(state => state.profilePage.status),
 		[editMode, setCount] = useState(true),
 		[changeStatus, setStatus] = useState(status),
+		{ userId } = useParams(),
 
 		toggleEditMode = (e) => {
+			if (userId) return;
 			if (e.detail === 2) return setCount(false);
 			setCount(true);
 			dispatch(updateUserStatus(changeStatus));
@@ -19,8 +22,10 @@ const ProfileStatus = () => {
 
 	useEffect(() => { setStatus(status) }, [status]);
 
+
 	return (
 		<div>
+			<b>Status: </b>
 			{editMode ? <span onDoubleClick={toggleEditMode} >{changeStatus || 'Empty status'}</span> :
 				<div>
 					<input type='text' value={changeStatus} onBlur={toggleEditMode}

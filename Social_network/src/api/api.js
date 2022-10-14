@@ -22,6 +22,11 @@ export const usersAPI = {
 	getUserStatus(userId) { return instance.get(`profile/status/${userId}`) },
 	updateUserStatus(status) { return instance.put('profile/status', { status }) },
 	signIn(obj) { return instance.post('auth/login', obj) },
-	logout() { return instance.delete('auth/login') }
+	logout() { return instance.delete('auth/login') },
+	saveAvatar(photoFile) {
+		const formData = new FormData();
+		formData.append('image', photoFile)
+		return instance.put('profile/photo', formData, { headers: { 'Content-Type': 'multipart/form-data' } })
+	},
 
 }
