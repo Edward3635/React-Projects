@@ -52,10 +52,15 @@ export const getUserStatus = userId => async dispatch => {
 	dispatch(setUserStatus(response.data));
 };
 export const updateUserStatus = status => async dispatch => {
-	let response = await usersAPI.updateUserStatus(status);
-	if (response.data.resultCode === 0) {
-		dispatch(setUserStatus(status));
+	try {
+		let response = await usersAPI.updateUserStatus(status);
+		if (response.data.resultCode === 0) {
+			dispatch(setUserStatus(status));
+		}
+	} catch (error) {
+		//code
 	}
+
 };
 export const saveAvatar = file => async dispatch => {
 	let response = await usersAPI.saveAvatar(file);
@@ -64,3 +69,13 @@ export const saveAvatar = file => async dispatch => {
 		dispatch(saveAvatarSuccess(response.data.data.photos))
 	}
 };
+
+export const saveProfile = (profileData, setStatus) => async dispatch => {
+	let response = await usersAPI.saveProfile(profileData);
+	if (response.data.resultCode === 0) dispatch(getUserProfile(profileData.userId));
+	else {
+		setStatus(response.data.messages[0]);
+		return Promise.reject(response.data.messages[0]);
+	}
+};
+

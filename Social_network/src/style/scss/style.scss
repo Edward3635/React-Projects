@@ -145,6 +145,10 @@ body {
 		position: relative;
 	}
 	.section__profile {
+		textarea,
+		input {
+			font-size: 1rem;
+		}
 		.profile__banner {
 			img {
 				width: 100%;
@@ -175,9 +179,6 @@ body {
 						}
 					}
 
-					> img {
-						margin-bottom: 15px;
-					}
 					.upload__avatar {
 						position: absolute;
 						left: 50%;
@@ -199,12 +200,89 @@ body {
 						width: 0;
 					}
 				}
+				b {
+					font-weight: 400;
+				}
+				.form__edit-profile {
+					font-family: math;
+				}
 				.profile__name {
 					padding-top: 15px;
 					margin-bottom: 15px;
 				}
+				.profile__name-title {
+					padding-right: 10px;
+				}
+				.profile__status {
+					cursor: pointer;
+				}
+			}
+			.save__profile,
+			.turn__back,
+			.edit__profile {
+				margin-top: 15px;
+				background: #0dbb75;
+				border: 1px solid #5d212a;
+				color: #fff;
+				padding: 3px 15px;
+				cursor: pointer;
+				transition: all 0.2s;
+				border-radius: 2px;
+				&:hover {
+					filter: brightness(1.2);
+					transition: all 0.4s;
+				}
+			}
+			.save__profile {
+				margin-right: 20px;
+			}
+			.profile__field {
+				padding: 5px;
+				margin: 8px 0;
+				box-sizing: border-box;
+			}
+			.profile__title {
+				font-weight: 500;
+			}
+			.flex__input {
+				display: flex;
+				align-items: center;
+				justify-content: right;
+				gap: 20px;
+			}
+			.textarea__profile {
+				width: 59%;
+				padding: 5px;
+				margin: 8px 0;
+				resize: none;
+				padding-bottom: 20px;
+			}
+			.skills__description {
+				text-align: end;
+			}
+			.checkbox__job-looking {
+				width: 20px;
+				height: 15px;
+				margin: 8px;
+			}
+			.profile__name-edit {
+				padding-top: 15px;
+				margin: 8px;
+			}
+			.profile__edit {
+				margin: 8px;
+			}
+			.control__buttons-profile {
+				text-align: center;
+			}
+			.error__span {
+				color: rgb(240, 73, 73);
+				text-shadow: 1px 1px 1px rgb(39, 38, 38);
+				display: block;
+				text-align: end;
 			}
 		}
+
 		.my__posts {
 			.create__post {
 				padding: 5px;
@@ -457,7 +535,20 @@ body {
 				background-color: #ee5684;
 				box-shadow: 1px 1px 3px;
 				border-radius: 5px;
+				margin-bottom: 35px;
 			}
+		}
+		.captcha__wrapper {
+			text-align: center;
+		}
+		.input__captcha {
+			border-radius: 5px;
+			width: 100%;
+			height: 35px;
+			padding: 0 10px;
+			border: 1px solid gray;
+			margin-top: 15px;
+			margin-bottom: 15px;
 		}
 	}
 	.users__preloader {

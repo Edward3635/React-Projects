@@ -1,7 +1,11 @@
 import React from 'react';
-import avatar from '../../../../../../src/img/ava.jpg';
+import { useSelector } from 'react-redux';
+import avaDefault from '../../../../../img/userPhoto.png'
 
 const Post = (props) => {
+	const profile = useSelector(state => state.profilePage.profile);
+	let avatar;
+	profile && profile.photos.small ? avatar = profile.photos.small : avatar = avaDefault;
 	return (
 		<div className='post'>
 			<img src={avatar} alt="Avatar" />

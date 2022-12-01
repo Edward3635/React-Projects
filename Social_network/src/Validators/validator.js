@@ -2,7 +2,13 @@ import * as yup from 'yup'
 
 export const signInFormValidation = yup.object().shape({
 	email: yup.string().typeError('Must be a string').required('Required'),
-	password: yup.string().typeError('Must be a string').required('Required')
+	password: yup.string().typeError('Must be a string').required('Required'),
+	captcha: yup.string().typeError('Must be a string')
+});
+export const signInFormValidation2 = yup.object().shape({
+	email: yup.string().typeError('Must be a string').required('Required'),
+	password: yup.string().typeError('Must be a string').required('Required'),
+	captcha: yup.string().typeError('Must be a string').required('Required')
 });
 
 // export const sendMessageFormValidation = yup.object().shape({

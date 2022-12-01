@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = ({ name, value }) => {
 	return (
-		<div><i>{name}:</i> {value}</div>
+		value && <div><i>{name}:</i> {value}</div>
 	)
 }
 

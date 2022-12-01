@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 //import Profile from './Profile/Profile';
 //import Messages from './Messages/Messages';
 //import News from './News/News';
@@ -22,6 +22,7 @@ const MainRoutes = () => {
 	return (
 		<Suspense fallback={<Preloader />}>
 			<Routes>
+				<Route path='/' element={<Navigate to='/profile' />} />
 				<Route path='/profile' element={<Profile />}>
 					<Route path='/profile/:userId' element={<Profile />} />
 				</Route>
@@ -32,6 +33,7 @@ const MainRoutes = () => {
 				<Route path='/settings' element={<Settings />} />
 				<Route path='/friends' element={<Users />} />
 				<Route path='/SignIn' element={<SignIn />} />
+				<Route path='/*' element={'Not found'} />
 			</Routes>
 		</Suspense>
 	);

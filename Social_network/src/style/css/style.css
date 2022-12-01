@@ -210,6 +210,10 @@ body {
   background-color: rgb(203, 196, 196);
   position: relative;
 }
+.main .section__profile textarea,
+.main .section__profile input {
+  font-size: 1rem;
+}
 .main .section__profile .profile__banner img {
   width: 100%;
   height: 200px;
@@ -238,9 +242,6 @@ body {
   opacity: 1;
   transition: all 0.45s;
 }
-.main .section__profile .profile__content .profile__info .profile__avatar > img {
-  margin-bottom: 15px;
-}
 .main .section__profile .profile__content .profile__info .profile__avatar .upload__avatar {
   position: absolute;
   left: 50%;
@@ -261,9 +262,87 @@ body {
   visibility: hidden;
   width: 0;
 }
+.main .section__profile .profile__content .profile__info b {
+  font-weight: 400;
+}
+.main .section__profile .profile__content .profile__info .form__edit-profile {
+  font-family: math;
+}
 .main .section__profile .profile__content .profile__info .profile__name {
   padding-top: 15px;
   margin-bottom: 15px;
+}
+.main .section__profile .profile__content .profile__info .profile__name-title {
+  padding-right: 10px;
+}
+.main .section__profile .profile__content .profile__info .profile__status {
+  cursor: pointer;
+}
+.main .section__profile .profile__content .save__profile,
+.main .section__profile .profile__content .turn__back,
+.main .section__profile .profile__content .edit__profile {
+  margin-top: 15px;
+  background: #0dbb75;
+  border: 1px solid #5d212a;
+  color: #fff;
+  padding: 3px 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 2px;
+}
+.main .section__profile .profile__content .save__profile:hover,
+.main .section__profile .profile__content .turn__back:hover,
+.main .section__profile .profile__content .edit__profile:hover {
+  filter: brightness(1.2);
+  transition: all 0.4s;
+}
+.main .section__profile .profile__content .save__profile {
+  margin-right: 20px;
+}
+.main .section__profile .profile__content .profile__field {
+  padding: 5px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+.main .section__profile .profile__content .profile__title {
+  font-weight: 500;
+}
+.main .section__profile .profile__content .flex__input {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 20px;
+}
+.main .section__profile .profile__content .textarea__profile {
+  width: 59%;
+  padding: 5px;
+  margin: 8px 0;
+  resize: none;
+  padding-bottom: 20px;
+}
+.main .section__profile .profile__content .skills__description {
+  text-align: end;
+}
+.main .section__profile .profile__content .checkbox__job-looking {
+  width: 20px;
+  height: 15px;
+  margin: 8px;
+}
+.main .section__profile .profile__content .profile__name-edit {
+  padding-top: 15px;
+  margin: 8px;
+}
+.main .section__profile .profile__content .profile__edit {
+  margin: 8px;
+}
+.main .section__profile .profile__content .control__buttons-profile {
+  text-align: center;
+}
+.main .section__profile .profile__content .error__span {
+  color: rgb(240, 73, 73);
+  text-shadow: 1px 1px 1px rgb(39, 38, 38);
+  display: block;
+  text-align: end;
 }
 .main .section__profile .my__posts .create__post {
   padding: 5px;
@@ -513,6 +592,19 @@ body {
   background-color: #ee5684;
   box-shadow: 1px 1px 3px;
   border-radius: 5px;
+  margin-bottom: 35px;
+}
+.main .section__login .captcha__wrapper {
+  text-align: center;
+}
+.main .section__login .input__captcha {
+  border-radius: 5px;
+  width: 100%;
+  height: 35px;
+  padding: 0 10px;
+  border: 1px solid gray;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .main .users__preloader {
   text-align: center;

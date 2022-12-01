@@ -12,6 +12,7 @@ const MyPosts = () => {
 		posts = profilePage.map(el => <Post msg={el.msg} key={el.id} likesCount={el.likesCount} />);
 
 
+
 	return (
 		<div className='my__posts'>
 			<div className='create__post'>

@@ -26,9 +26,11 @@ const ProfileStatus = () => {
 	return (
 		<div>
 			<b>Status: </b>
-			{editMode ? <span onDoubleClick={toggleEditMode} >{changeStatus || 'Empty status'}</span> :
+			{editMode ? <span className='profile__status' onDoubleClick={toggleEditMode} >
+				{changeStatus || 'Empty status'}
+			</span> :
 				<div>
-					<input type='text' value={changeStatus} onBlur={toggleEditMode}
+					<input className='profile__field' type='text' value={changeStatus} onBlur={toggleEditMode}
 						onChange={onStatusChange} autoFocus />
 				</div>}
 		</div>
