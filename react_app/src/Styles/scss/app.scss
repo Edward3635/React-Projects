@@ -1,0 +1,81 @@
+@import "./reset";
+
+#root {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.App {
+	width: 800px;
+}
+.post {
+	display: flex;
+	padding: 15px;
+	border: 2px solid teal;
+	margin-top: 15px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.post__btns {
+	display: flex;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 1.8rem;
+	text-shadow: 1px 2px 4px black;
+}
+.border__line {
+	border-top: 2px solid teal;
+	margin: 10px 0;
+}
+.post-enter {
+	transform: translateX(-350px);
+}
+.post-enter-active {
+	transform: translateX(0px);
+	transition: all 500ms ease-in;
+}
+.post-exit {
+	opacity: 1;
+}
+.post-exit-active {
+	transform: translateX(-350px);
+	transition: all 500ms ease-in;
+}
+
+.page__wrapper {
+	max-width: fit-content;
+	margin: 20px auto;
+	display: flex;
+}
+.page {
+	padding: 10px;
+	border: 1px solid teal;
+	cursor: pointer;
+}
+
+.page__current {
+	border: 2px solid orange;
+	font-weight: bold;
+}
+
+.navbar {
+	height: 50px;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	padding: 0 10px;
+	background: lightgray;
+}
+
+.navbar__links {
+	display: flex;
+	gap: 10px;
+	font-weight: 700;
+	font-size: 1.1rem;
+	a {
+		color: teal;
+	}
+}

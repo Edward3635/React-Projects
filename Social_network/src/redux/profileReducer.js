@@ -1,4 +1,5 @@
 import { usersAPI } from "../api/api";
+import { globalErrorRequest } from "./appReducer";
 
 const initialState = {
 	postData: [
@@ -58,7 +59,7 @@ export const updateUserStatus = status => async dispatch => {
 			dispatch(setUserStatus(status));
 		}
 	} catch (error) {
-		//code
+		globalErrorRequest(error);
 	}
 
 };

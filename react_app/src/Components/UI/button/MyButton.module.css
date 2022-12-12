@@ -1,0 +1,28 @@
+.myBtn{
+	padding: 5px 15px;
+	color: teal;
+	font-size: 1.1rem;
+	background: transparent;
+	border: 1px solid teal;
+	cursor: pointer;
+	font-weight: 600;
+	transition: all 0.2s;
+}
+.myBtn:hover{
+	filter: brightness(1.5);
+	box-shadow: 1px 1px 1px teal;
+	transition: all 0.4s;
+}
+.myBtn:active{
+	transform: scale(0.94,0.94);
+}
+.btn__disabled:active{
+	transform: none;
+}
+.btn__disabled:hover{
+	filter:none;
+	box-shadow: 0 0 0;
+	transition: 0;
+
+
+}
