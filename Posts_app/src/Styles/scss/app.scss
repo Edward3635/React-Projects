@@ -79,3 +79,36 @@ h1 {
 		color: teal;
 	}
 }
+
+.page__post {
+	max-width: 90%;
+	margin: 20px 0 auto;
+	padding: 0 25px 25px;
+	border: 2px solid teal;
+	.page__post-title {
+		text-align: center;
+		margin: 20px 0;
+		color: teal;
+		text-shadow: 1px 1px 2px teal;
+	}
+	.page__post-text {
+		font-weight: 600;
+		font-size: 1.25rem;
+		margin-bottom: 20px;
+	}
+	.page__post-comments {
+		text-align: center;
+		font-size: 1.25rem;
+		font-weight: 600;
+	}
+	.com__email {
+		font-style: italic;
+		font-weight: 600;
+		margin-bottom: 5px;
+		margin-top: 20px;
+	}
+}
+.page__post-error {
+	margin-top: 40vh;
+	font-size: 3rem;
+}
