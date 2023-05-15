@@ -1,0 +1,370 @@
+@charset "UTF-8";
+h3 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.48;
+  color: #000;
+}
+
+.section1 {
+  padding: 88px 60px 0px 130px;
+  margin: 0 auto 60px auto;
+}
+.section1 .product {
+  display: flex;
+  justify-content: space-between;
+}
+.section1 .product .productImg {
+  padding-top: 115px;
+}
+.section1 .product .productImg .mainImg {
+  margin-bottom: 30px;
+}
+.section1 .product .productImg .imgList {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 51px;
+  gap: 50px;
+}
+.section1 .product .productImg .imgList > li {
+  cursor: pointer;
+}
+.section1 .product .productImg .imgList > li:hover {
+  border: 2px solid #333;
+}
+.section1 .product .productImg .imgList > .firstImg {
+  padding: 14px 28px;
+  border: 2px solid gray;
+}
+.section1 .product .productImg .imgList .secondImg {
+  padding: 30px;
+  border: 2px solid gray;
+}
+.section1 .product .productImg .imgList .currentImg {
+  border: 2px solid #b93b54;
+}
+.section1 .product .productImg .imgList .currentImg:hover {
+  border-color: #b93b54;
+}
+.section1 .product .productInfo {
+  flex-grow: 1;
+  max-width: 654px;
+}
+.section1 .product .productInfo .productIndex {
+  font-size: 15px;
+  line-height: 1.46;
+  color: #000;
+}
+.section1 .product .productInfo .stars {
+  margin-top: 20px;
+}
+.section1 .product .productInfo .starsList {
+  display: flex;
+  gap: 7px;
+  width: fit-content;
+  font-size: 15px;
+  line-height: 1.466;
+}
+.section1 .product .productInfo .starsList > li:last-child {
+  margin-left: 20px;
+}
+.section1 .product .productInfo .price {
+  padding-top: 39px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #000;
+  opacity: 0.67;
+}
+.section1 .product .productInfo .price > span {
+  display: block;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.472;
+  margin-bottom: 16px;
+}
+.section1 .product .productInfo .color {
+  margin-bottom: 6px;
+}
+.section1 .product .productInfo .color .colorTitle {
+  margin-bottom: 7px;
+}
+.section1 .product .productInfo .size {
+  margin-bottom: 42px;
+}
+.section1 .product .productInfo .size .sizeTitle {
+  margin-bottom: 18px;
+}
+.section1 .product .productInfo .size .sizeList {
+  display: flex;
+  gap: 15px;
+}
+.section1 .product .productInfo .size .sizeList > li {
+  font-size: 18px;
+  line-height: 1.5;
+  width: fit-content;
+}
+.section1 .product .productInfo .size .sizeList > li > button {
+  padding: 4px 14px 4px;
+  box-shadow: none;
+  filter: none;
+  transform: none;
+  transition: none;
+  background-color: transparent;
+  border: 2px solid #c4c4c4;
+}
+.section1 .product .productInfo .size .sizeList > li > button:focus {
+  border-color: green;
+}
+.section1 .product .productInfo .btns {
+  display: flex;
+  gap: 20px;
+}
+.section1 .product .productInfo .btns .addToBag {
+  padding: 10px 85px 10px 121px;
+  background: #b93b54 url("../../../../../img/bag.svg") no-repeat center left 76px;
+  color: #fff;
+  font-size: 24px;
+  line-height: 1.5;
+}
+.section1 .product .productInfo .btns .addToWish {
+  padding: 10px 57px 10px 102px;
+  border: 1px solid #000000;
+  color: #b93b54;
+  background: #fff url("../../../../../img/like.svg") no-repeat center left 57px;
+  font-size: 24px;
+  line-height: 1.5;
+}
+.section1 .product .productInfo .links {
+  padding-top: 34px;
+  display: flex;
+  gap: 26px;
+  margin-bottom: 26px;
+}
+.section1 .product .productInfo .shopping {
+  background: #fafafa;
+  padding: 17px 0 32px;
+}
+.section1 .product .productInfo .shopping .shoppingTitle {
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.8;
+  color: #333;
+}
+.section1 .product .productInfo .shopping .underline {
+  max-width: 385px;
+  height: 1px;
+  background: #b93b54;
+  margin: 0 auto 13px auto;
+}
+.section1 .product .productInfo .shopping .shoppingInfo {
+  display: flex;
+  justify-content: space-between;
+  max-width: 541px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+.section1 .product .productInfo .shopping .shoppingInfo .shipping,
+.section1 .product .productInfo .shopping .shoppingInfo .returns {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.section1 .product .productInfo .shopping .shoppingInfo .shipping {
+  max-width: 208px;
+}
+.section1 .product .productInfo .shopping .shoppingInfo .shipping .shippingText {
+  max-width: 148px;
+}
+.section1 .product .productInfo .shopping .shoppingInfo .returns {
+  max-width: 213px;
+}
+
+.section2 {
+  margin-bottom: 63px;
+}
+.section2 h3 {
+  text-align: center;
+  margin-bottom: 35px;
+}
+.section2 .details {
+  margin: 0 auto;
+  max-width: 1095px;
+  padding: 45px 90px 79px;
+  background: #fafafa;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.35;
+  color: #333;
+}
+.section2 .paragraph {
+  margin-bottom: 33px;
+}
+.section2 .detailsList > li {
+  position: relative;
+  margin-bottom: 8px;
+}
+.section2 .detailsList > li::before {
+  content: "•";
+  position: absolute;
+  margin-right: 100%;
+  right: 10px;
+}
+
+.section3 {
+  background: #333333;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+}
+.section3 h3 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 37px;
+  padding-top: 40px;
+}
+.section3 .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1321px;
+  margin: 0 auto 49px auto;
+}
+.section3 .card {
+  padding: 24px 25px;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.section3 .card .rating {
+  margin-top: 4px;
+  max-width: 105px;
+}
+.section3 .card .rating li > img:not(:last-child) {
+  margin-right: 5px;
+}
+.section3 .card .rating li:not(last-child) {
+  margin-bottom: 6px;
+}
+.section3 .card .comment {
+  flex-grow: 1;
+  max-width: 251px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.22;
+  color: #000;
+  white-space: pre-line;
+}
+
+.section4 {
+  max-width: 1152px;
+  margin: 0 auto;
+  background-color: #fafafa;
+  text-align: center;
+  padding-bottom: 38px;
+  position: relative;
+}
+.section4 .title {
+  padding-top: 30px;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.472;
+  color: #a04955;
+}
+.section4 h3 {
+  color: #333;
+}
+.section4 .yourRating,
+.section4 h4 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #333;
+}
+.section4 .yourRating {
+  padding-top: 14px;
+  margin-bottom: 44px;
+}
+.section4 .ratingList {
+  max-width: 492px;
+  margin: 0 auto 76px auto;
+}
+.section4 .ratingList > li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section4 .ratingList > li:not(:last-child) {
+  margin-bottom: 35px;
+}
+.section4 .ratingList > li img:not(:last-child) {
+  margin-right: 15px;
+}
+.section4 .ratingList .stars img {
+  cursor: pointer;
+}
+.section4 .reviewForm {
+  max-width: 985px;
+  margin: 0 auto;
+}
+.section4 .reviewForm input,
+.section4 .reviewForm textarea {
+  border: 1px solid #333;
+  color: #333;
+  font-size: 18px;
+  line-height: 1.5;
+  padding-left: 20px;
+}
+.section4 .reviewForm input::placeholder,
+.section4 .reviewForm textarea::placeholder {
+  opacity: 0.5;
+}
+.section4 .reviewForm input:focus::placeholder,
+.section4 .reviewForm textarea:focus::placeholder {
+  color: #fff;
+}
+.section4 .reviewForm .inputFlex {
+  display: flex;
+  gap: 19px;
+  margin-bottom: 20px;
+}
+.section4 .reviewForm .inputFlex > input {
+  flex-grow: 1;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.section4 .reviewForm .areaReview {
+  display: block;
+  width: 100%;
+  resize: none;
+  height: 147px;
+  padding-top: 7px;
+  margin-bottom: 24px;
+}
+.section4 .reviewForm .btnSubmit {
+  padding: 7px 87px;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #fff;
+  background: #a04955;
+}
+.section4 .anker {
+  position: absolute;
+  left: 1161px;
+  bottom: 35px;
+  background: #a04955;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  width: 83px;
+  height: 83px;
+  transform: rotate(-180deg);
+}
+.section4 .anker:hover {
+  transform: rotate(0deg);
+}
