@@ -455,8 +455,3 @@ input::-webkit-search-results-decoration {
     font-size: 40px;
   }
 }
-@media (max-width: 480px) {
-  .header .header__top-nav .logo__wrapper img {
-    max-width: 150px;
-  }
-}

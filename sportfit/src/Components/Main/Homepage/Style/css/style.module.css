@@ -154,6 +154,7 @@ h4 {
 }
 .section3 .pantsImgBlock {
   position: relative;
+  margin-right: 40px;
 }
 .section3 .pantsImgBlock > img {
   position: relative;
@@ -184,7 +185,7 @@ h4 {
   display: flex;
   justify-content: space-between;
   max-width: 1136px;
-  padding: 107px 0;
+  padding: 107px 15px;
 }
 .section4 .section4MainBlock .section4CardBlock {
   max-width: 550px;
@@ -358,4 +359,200 @@ button:hover {
 }
 button:active {
   transform: scale(1);
+}
+
+@media (min-width: 1200px) and (max-width: 1380px) {
+  .section2 .section2Cards {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .section6 .section6Main .section6ImgBlock {
+    padding: 0 20px;
+  }
+  .section7 .upArrow {
+    left: unset;
+    right: 3px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .section2 .section2Cards {
+    flex-wrap: wrap;
+    max-width: 750px;
+    gap: 75px;
+  }
+  .section3 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .section3 .pantsImgBlock img {
+    max-width: 570px;
+  }
+  .section4 .section4MainBlock .section4CardBlock .section4Img img {
+    max-width: 85%;
+  }
+  .section4 .section4MainBlock .section4CardBlock .section4Img .section4imgText {
+    max-width: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .section6 .section6Main .section6ImgBlock {
+    padding: 0 10px;
+  }
+  .section7 .upArrow {
+    left: unset;
+    right: 3px;
+  }
+}
+@media (max-width: 992px) {
+  .section1 {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+  }
+  .section1 .titleTop {
+    font-size: 65px;
+  }
+  .section1 .titleTopDescription {
+    font-size: 24px;
+  }
+  .section2 .section2Cards {
+    flex-wrap: wrap;
+    max-width: 690px;
+    gap: 90px;
+  }
+  .section3 {
+    padding: 90px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+  }
+  .section3 .pantsImgBlock {
+    order: 2;
+  }
+  .section4 .section4MainBlock {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+  }
+  .section5 .section5Main {
+    margin: 0 auto;
+  }
+  .section6 .section6Main {
+    margin-bottom: 891px;
+  }
+  .section6 .section6Main .section6ImgBlock {
+    flex-wrap: wrap;
+    max-width: 760px;
+    gap: 100px;
+  }
+  .section6 .section6Main .section6ImgBlock .card:nth-child(3) {
+    margin: 0 auto;
+  }
+  .section7 .upArrow {
+    left: unset;
+    right: 3px;
+  }
+}
+@media (max-width: 767px) {
+  .section1 {
+    margin-top: 30px;
+  }
+  .section1 .sectionImg {
+    margin-left: 50px;
+  }
+  .section1 .sectionImg .fillSquare {
+    max-width: 330px;
+  }
+  .section1 .sectionImg > img {
+    max-width: 550px;
+    right: -51px;
+  }
+  .section1 .sectionImg .emptySquare {
+    max-width: 330px;
+    right: 92px;
+  }
+  .section2 .section2Cards {
+    justify-content: center;
+  }
+  .section2 .section2Cards .clothesCards {
+    padding: 50px 95px;
+    border: 1px solid rgb(160, 73, 6);
+  }
+  .section3 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .section3 .pantsImgBlock {
+    margin-right: 0;
+  }
+  .section3 .pantsImgBlock > img {
+    max-width: 450px;
+  }
+  .section3 .pantsImgBlock .pantsRectangle1,
+  .section3 .pantsImgBlock .pantsRectangle2 {
+    max-width: 300px;
+    height: 100%;
+    max-height: 300px;
+  }
+  .section4 .section4MainBlock .section4CardBlock .section4Img > img {
+    max-width: 350px;
+  }
+  .section4 .section4MainBlock .section4CardBlock .section4Img .section4imgText {
+    max-width: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .section5 .section5Main {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .section6 .section6Main {
+    margin-bottom: 1345px;
+  }
+  .section6 .section6Main .section6ImgBlock {
+    margin-top: 100px;
+    max-width: 400px;
+  }
+  .section6 .section6Main .section6ImgBlock > div {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 480px) {
+  .section1 .sectionImg .fillSquare {
+    max-width: 165px;
+    max-height: 300px;
+  }
+  .section1 .sectionImg img {
+    max-width: 380px;
+  }
+  .section1 .sectionImg .emptySquare {
+    max-height: 300px;
+    max-width: 200px;
+    right: 80px;
+  }
+  .section2 .section2Cards .clothesCards {
+    padding: 25px 40px;
+  }
+  .section3 .pantsImgBlock > img {
+    max-width: 300px;
+  }
+  .section3 .pantsImgBlock .pantsRectangle1 {
+    max-width: 200px;
+    max-height: 200px;
+  }
+  .section3 .pantsImgBlock .pantsRectangle2 {
+    max-width: 200px;
+    max-height: 200px;
+  }
+  .section4 .section4MainBlock .section4CardBlock .section4Img img {
+    max-width: 270px;
+  }
+  .section4 .section4MainBlock .section4CardBlock .section4Img .section4imgText {
+    max-width: 270px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .section4 .section4MainBlock .section4CardBlock button {
+    font-size: 17px;
+  }
 }
