@@ -1,12 +1,37 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux'
 
 import cl from '../../Style/Header.module.css';
 import { ROUTES } from '../../Utils/Routes';
 import LOGO from '../../Img/logo.svg';
 import AVATAR from '../../Img/avatar.jpg';
+import { toggleForm } from '../../Features/User/UserSlice';
+import { useGetProductsQuery } from '../../Features/API/APISlice';
 
 const Header = () => {
+	const dispatch = useDispatch();
+	const navigate = useNavigate();
+	const { currentUser } = useSelector(({ user }) => user);
+	const [searchValue, setSearchValue] = useState('');
+
+	const handleClick = () => {
+		if (!currentUser) dispatch(toggleForm(true));
+		else navigate(ROUTES.PROFILE);
+	};
+	const [values, setValues] = useState({ name: 'Guest', avatar: AVATAR });
+
+	const { data, isLoading } = useGetProductsQuery({ title: searchValue });
+
+	const handleSearch = ({ target: { value } }) => {
+		setSearchValue(value)
+	};
+
+	useEffect(() => {
+		if (!currentUser) return;
+		setValues(currentUser);
+	}, [currentUser]);
+
 	return (
 		<div className={cl.header}>
 			<div className={cl.logo}>
@@ -16,9 +41,9 @@ const Header = () => {
 			</div>
 
 			<div className={cl.info}>
-				<div className={cl.user}>
-					<div className={cl.avatar} style={{ backgroundImage: `url(${AVATAR})` }} />
-					<div className={cl.username}>Guest</div>
+				<div className={cl.user} onClick={handleClick}>
+					<div className={cl.avatar} style={{ backgroundImage: `url(${values.avatar})` }} />
+					<div className={cl.username}>{values.name}</div>
 				</div>
 				<form className={cl.form}>
 					<div className={cl.icon}>
@@ -28,10 +53,22 @@ const Header = () => {
 					</div>
 					<div className={cl.input}>
 						<input type="search" name='search' placeholder='Search for anything...'
-							autoComplete='off' onChange={() => { }} value="" />
+							autoComplete='off' onChange={handleSearch} value={searchValue} />
 					</div>
 
-					{false && <div className={cl.box}></div>}
+					{searchValue && <div className={cl.box}>
+						{isLoading ? 'Loading' : !data.length ? 'No resault' : (
+							data.map(({ title, images, id }) => {
+								return (
+									<Link to={`/products/${id}`} className={cl.item}
+										onClick={() => setSearchValue('')} key={id}>
+										<div className={cl.image} style={{ backgroundImage: `url(${images[0]})` }} />
+										<div className={cl.title}>{title}</div>
+									</Link>
+								)
+							})
+						)}
+					</div>}
 				</form>
 
 				<div className={cl.account}>
