@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import cl from '../../Style/Footer.module.css';
 import { ROUTES } from '../../Utils/Routes';
 
-import LOGO from '../../Img/logo.svg';
+import LOGO from '../../Img/logo.png';
 
 const Footer = () => {
 	return (

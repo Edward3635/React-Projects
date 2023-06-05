@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import cl from '../../Style/Header.module.css';
 import { ROUTES } from '../../Utils/Routes';
-import LOGO from '../../Img/logo.svg';
+import LOGO from '../../Img/logo.png';
 import AVATAR from '../../Img/avatar.jpg';
 import { toggleForm } from '../../Features/User/UserSlice';
 import { useGetProductsQuery } from '../../Features/API/APISlice';
