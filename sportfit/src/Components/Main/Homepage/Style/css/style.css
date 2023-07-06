@@ -1,0 +1,558 @@
+h3 {
+  font-weight: 700;
+  font-size: 65px;
+  line-height: 1.48;
+  color: #001f3d;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.47;
+  color: #333333;
+}
+
+.section1 {
+  max-width: 93.06%;
+  margin: 70px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 246px;
+}
+.section1 .titleTop {
+  max-width: 578px;
+  margin-bottom: 10px;
+}
+.section1 .titleTopDescription {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.375;
+  color: #000;
+  margin-bottom: 30px;
+  display: block;
+}
+.section1 .section1Text {
+  padding-left: 10px;
+}
+.section1 .sectionImg {
+  position: relative;
+}
+.section1 .fillSquare {
+  width: 517px;
+  height: 465px;
+  background: #a04955;
+}
+.section1 .picture {
+  position: absolute;
+  top: 35px;
+  right: -10px;
+  z-index: 1;
+}
+.section1 .emptySquare {
+  position: absolute;
+  width: 518px;
+  height: 465px;
+  top: 156px;
+  right: 140px;
+  border: 1px solid #a04955;
+}
+
+.section2 {
+  background-color: #f1f1f1;
+}
+.section2 h3,
+.section2 h4 {
+  text-align: center;
+}
+.section2 .section2Title {
+  margin-bottom: 23px;
+  padding-top: 80px;
+}
+.section2 .section2Title .section2BigText {
+  font-size: 64px;
+  line-height: 1.48;
+  color: #333;
+}
+.section2 .section2Cards {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1296px;
+  margin: 0 auto;
+  padding-bottom: 79px;
+}
+.section2 .section2Cards .clothesCards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  background-color: #fff;
+  padding: 32px 57px;
+  justify-content: space-between;
+  height: 100%;
+}
+.section2 .section2Cards .clothesCards:hover {
+  filter: brightness(0.9);
+  transition: background-color 0.3s ease;
+}
+.section2 .section2Cards .cardName {
+  margin-top: 5px;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 1.565;
+  margin-bottom: 5px;
+  max-width: 163px;
+  text-align: center;
+}
+.section2 .section2Cards .stars {
+  margin-bottom: 5px;
+}
+.section2 .section2Cards .stars img:not(:last-child) {
+  margin-right: 7px;
+}
+.section2 .section2Cards .cardPrice {
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+.section2 .section2Cards .cardPrice > span {
+  font-weight: 500;
+}
+.section2 .section2Cards .addToCard {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  max-width: fit-content;
+  padding: 4px 8px 4px 33px;
+  background-color: #a04955;
+  color: #fff;
+  background-image: url("../../../../../img/shopping_bag.svg");
+  background-repeat: no-repeat;
+  background-position: 5px 6px;
+}
+
+.section3 {
+  background-color: #fff;
+  padding: 90px 71px;
+  display: flex;
+  justify-content: space-between;
+}
+.section3 .pantsBlockText {
+  max-width: 550px;
+}
+.section3 .pantsBlockText .spanPantsDescription {
+  display: inline-block;
+  margin: 10px 0 30px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.375;
+}
+.section3 .pantsImgBlock {
+  position: relative;
+  margin-right: 40px;
+}
+.section3 .pantsImgBlock > img {
+  position: relative;
+  z-index: 1;
+}
+.section3 .pantsImgBlock .pantsRectangle1,
+.section3 .pantsImgBlock .pantsRectangle2 {
+  position: absolute;
+  border: 1px solid #a04955;
+  width: 517px;
+  height: 465px;
+}
+.section3 .pantsImgBlock .pantsRectangle1 {
+  top: 13px;
+  right: 1px;
+}
+.section3 .pantsImgBlock .pantsRectangle2 {
+  bottom: -9px;
+  left: 2px;
+}
+
+.section4 {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+.section4 .section4MainBlock {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1136px;
+  padding: 107px 15px;
+}
+.section4 .section4MainBlock .section4CardBlock {
+  max-width: 550px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.375;
+  text-align: center;
+}
+.section4 .section4MainBlock .section4CardBlock .section4Img {
+  margin-bottom: 35px;
+  position: relative;
+  font-family: "Oswald";
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.472;
+  color: #ffffff;
+}
+.section4 .section4MainBlock .section4CardBlock .section4Img .section4imgText {
+  position: absolute;
+  background: #a04955;
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 17px 0;
+}
+.section4 .section4MainBlock .section4CardBlock > button {
+  margin-top: 25px;
+}
+
+.section5 {
+  background-image: url("../../../../../img/poster_pant.png");
+  background-position-y: -17px;
+  margin-bottom: 90px;
+}
+.section5 .section5Main {
+  margin-left: 152px;
+  padding: 22px 0 40px;
+  max-width: 500px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.375;
+  color: #fff;
+}
+.section5 .section5Main > h3 {
+  font-family: "Oswald";
+  color: #fff;
+}
+.section5 .section5Btn {
+  margin-top: 30px;
+  padding: 9px 20px;
+  font-weight: 300;
+  font-size: 24px;
+  background: #a04955;
+  color: #fff;
+}
+
+.section6 .section6Main {
+  background-color: #a04955;
+  text-align: center;
+  padding-top: 30px;
+  position: relative;
+  margin-bottom: 414px;
+}
+.section6 .section6Main h3 {
+  color: #fff;
+  padding-bottom: 213px;
+}
+.section6 .section6Main .section6ImgBlock {
+  position: absolute;
+  margin: 30px auto 0 auto;
+  top: 126px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 1262px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #333;
+}
+.section6 .section6Main .card {
+  background-color: #fff;
+  border: 1px solid #a04955;
+  position: relative;
+  width: 100%;
+  max-width: 314px;
+  padding: 223px 0 38px;
+}
+.section6 .section6Main .card > img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.section6 .section6Main .card .imgBelt {
+  top: -31px;
+}
+.section6 .section6Main .card .imgTrunk {
+  top: 16px;
+}
+.section6 .section6Main .card .imgCatalog {
+  top: -10px;
+}
+.section6 .section6Main button {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.39;
+  background: #a04955;
+  color: #fff;
+  padding: 8px 20px;
+  margin-top: 15px;
+}
+.section6 .section6Main .beltBtn {
+  padding: 8px 53px;
+}
+
+.section7 .section7Main {
+  max-width: 1214px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 46px;
+  padding: 130px 0 43px;
+  background-color: #f3f3f3;
+  position: relative;
+}
+.section7 .section7Description {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.375;
+  padding-top: 20px;
+  margin-bottom: 35px;
+}
+.section7 .section7Img {
+  position: absolute;
+  top: -158px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.section7 .upArrow {
+  position: absolute;
+  width: 83px;
+  height: 83px;
+  background: #a04955;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  top: 340px;
+  left: 1184px;
+}
+
+button {
+  transition: all 0.3s ease-in-out;
+}
+button:hover {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.05);
+  filter: brightness(1.3);
+  box-shadow: 0px 0px 20px #888;
+}
+button:active {
+  transform: scale(1);
+}
+
+@media (min-width: 1200px) and (max-width: 1380px) {
+  .section2 .section2Cards {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .section6 .section6Main .section6ImgBlock {
+    padding: 0 20px;
+  }
+  .section7 .upArrow {
+    left: unset;
+    right: 3px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .section2 .section2Cards {
+    flex-wrap: wrap;
+    max-width: 750px;
+    gap: 75px;
+  }
+  .section3 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .section3 .pantsImgBlock img {
+    max-width: 570px;
+  }
+  .section4 .section4MainBlock .section4CardBlock .section4Img img {
+    max-width: 85%;
+  }
+  .section4 .section4MainBlock .section4CardBlock .section4Img .section4imgText {
+    max-width: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .section6 .section6Main .section6ImgBlock {
+    padding: 0 10px;
+  }
+  .section7 .upArrow {
+    left: unset;
+    right: 3px;
+  }
+}
+@media (max-width: 992px) {
+  .section1 {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+  }
+  .section1 .titleTop {
+    font-size: 65px;
+  }
+  .section1 .titleTopDescription {
+    font-size: 24px;
+  }
+  .section2 .section2Cards {
+    flex-wrap: wrap;
+    max-width: 690px;
+    gap: 90px;
+  }
+  .section3 {
+    padding: 90px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+  }
+  .section3 .pantsImgBlock {
+    order: 2;
+  }
+  .section4 .section4MainBlock {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+  }
+  .section5 .section5Main {
+    margin: 0 auto;
+  }
+  .section6 .section6Main {
+    margin-bottom: 891px;
+  }
+  .section6 .section6Main .section6ImgBlock {
+    flex-wrap: wrap;
+    max-width: 760px;
+    gap: 100px;
+  }
+  .section6 .section6Main .section6ImgBlock .card:nth-child(3) {
+    margin: 0 auto;
+  }
+  .section7 .upArrow {
+    left: unset;
+    right: 3px;
+  }
+}
+@media (max-width: 767px) {
+  .section1 {
+    margin-top: 30px;
+  }
+  .section1 .sectionImg {
+    margin-left: 50px;
+  }
+  .section1 .sectionImg .fillSquare {
+    max-width: 330px;
+  }
+  .section1 .sectionImg > img {
+    max-width: 550px;
+    right: -51px;
+  }
+  .section1 .sectionImg .emptySquare {
+    max-width: 330px;
+    right: 92px;
+  }
+  .section2 .section2Cards {
+    justify-content: center;
+  }
+  .section2 .section2Cards .clothesCards {
+    padding: 50px 95px;
+    border: 1px solid rgb(160, 73, 6);
+  }
+  .section3 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .section3 .pantsImgBlock {
+    margin-right: 0;
+  }
+  .section3 .pantsImgBlock > img {
+    max-width: 450px;
+  }
+  .section3 .pantsImgBlock .pantsRectangle1,
+  .section3 .pantsImgBlock .pantsRectangle2 {
+    max-width: 300px;
+    height: 100%;
+    max-height: 300px;
+  }
+  .section4 .section4MainBlock .section4CardBlock .section4Img > img {
+    max-width: 350px;
+  }
+  .section4 .section4MainBlock .section4CardBlock .section4Img .section4imgText {
+    max-width: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .section5 .section5Main {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .section6 .section6Main {
+    margin-bottom: 1345px;
+  }
+  .section6 .section6Main .section6ImgBlock {
+    margin-top: 100px;
+    max-width: 400px;
+  }
+  .section6 .section6Main .section6ImgBlock > div {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 480px) {
+  .section1 .sectionImg .fillSquare {
+    max-width: 165px;
+    max-height: 300px;
+  }
+  .section1 .sectionImg img {
+    max-width: 380px;
+  }
+  .section1 .sectionImg .emptySquare {
+    max-height: 300px;
+    max-width: 200px;
+    right: 80px;
+  }
+  .section2 .section2Cards .clothesCards {
+    padding: 25px 40px;
+  }
+  .section3 .pantsImgBlock > img {
+    max-width: 300px;
+  }
+  .section3 .pantsImgBlock .pantsRectangle1 {
+    max-width: 200px;
+    max-height: 200px;
+  }
+  .section3 .pantsImgBlock .pantsRectangle2 {
+    max-width: 200px;
+    max-height: 200px;
+  }
+  .section4 .section4MainBlock .section4CardBlock .section4Img img {
+    max-width: 270px;
+  }
+  .section4 .section4MainBlock .section4CardBlock .section4Img .section4imgText {
+    max-width: 270px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .section4 .section4MainBlock .section4CardBlock button {
+    font-size: 17px;
+  }
+}
