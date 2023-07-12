@@ -69,3 +69,30 @@ h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: 400;
 }
+
+.post__list {
+  width: 100%;
+  padding: 20px;
+}
+
+.user {
+  padding: 20px;
+  border: 1px solid red;
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.post {
+  padding: 20px;
+  border: 1px solid teal;
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
