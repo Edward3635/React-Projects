@@ -16,6 +16,7 @@ const TodoList: React.FC = () => {
 			<div style={{ display: 'flex' }}>
 				{pages.map(pg =>
 					<div
+						key={pg}
 						onClick={() => setTodoPage(pg)}
 						style={{ border: pg === page ? '2px solid green' : '1px solid gray', padding: 10 }}>
 						{pg}
