@@ -70,6 +70,43 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
+body {
+  background-color: #c08d55;
+}
+
 .todoList {
   margin-top: 40px;
+}
+
+.flex {
+  font-size: 20px;
+  font-weight: 600;
+  width: fit-content;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  margin: 0 auto;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.flex button {
+  font-size: 22px;
+  font-weight: 500;
+  padding: 15px 20px;
+  border: 2px solid rgb(0, 0, 0);
+  background-color: rgb(255, 129, 150);
+}
+.flex button:hover {
+  filter: brightness(1.1);
+}
+.flex button:active {
+  transform: scale(1.04);
+}
+.flex input {
+  border: 2px solid black;
+  padding: 5px 10px;
+  font-size: 22px;
+}
+.flex .input {
+  margin-right: 20px;
 }
