@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
-import {useTypedSelector} from './Hooks/useTypedSelector';
-import { useActions } from './Hooks/useAction';
+import {useTypedSelector} from '../Hooks/useTypedSelector';
+import { useActions } from '../Hooks/useAction';
 
-const UserList1: React.FC = () => {
+const UserList: React.FC = () => {
 	const { users, error, isLoading } = useTypedSelector(state => state.user);
 	const {fetchUsers} = useActions()
 	useEffect(() => {fetchUsers()}, []);
@@ -15,4 +15,4 @@ const UserList1: React.FC = () => {
 	)
 }
 
-export default UserList1
+export default UserList

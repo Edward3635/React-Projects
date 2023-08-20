@@ -1,23 +1,23 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import UsersPage from './components/UsersPage';
-import TodosPage from './components/TodosPage';
-import Lists from './components/Lists';
+import UsersPage from './components/User/UsersPage';
+import TodosPage from './components/Todo/TodosPage';
+import Main from './components/Main';
 import { Link } from 'react-router-dom';
-import UserItemPage from './components/UserItemPage';
-import TodoItemPage from './components/TodoItemPage';
+import UserItemPage from './components/User/UserItemPage';
+import TodoItemPage from './components/Todo/TodoItemPage';
 
 function App() {
 
 	return (
 		<BrowserRouter>
-			<div>
+			<div className='links'>
 				<Link to={'/users'}>User</Link>
 				<Link to={'/todos'}>Todo</Link>
 				<Link to={'/'}>Main</Link>
 			</div>
 			<Routes>
-				<Route path={'/'} element={<Lists />} />
+				<Route path={'/'} element={<Main />} />
 				<Route path={'/users'} element={<UsersPage />} />
 				<Route path={'/todos'} element={<TodosPage />} />
 				<Route path={'/users/:id'} element={<UserItemPage />} />

@@ -1,12 +1,14 @@
 import React, { FC, useState, useEffect } from 'react'
-import { IUser } from '../types/types';
+import { IUser } from '../../types/types';
 import axios from 'axios';
-import List from './List';
+import List from '../List';
 import UserItem from './UserItem';
+import { useNavigate } from 'react-router-dom';
 
 const UsersPage: FC = () => {
 
 	const [users, setUsers] = useState<IUser[]>([]);
+	const navigate = useNavigate();
 	useEffect(() => {
 		fetchUsers();
 	}, []);
@@ -21,7 +23,7 @@ const UsersPage: FC = () => {
 
 
 	return (
-		<List items={users} renderItem={(user) => <UserItem user={user} key={user.id} />} />
+		<List items={users} renderItem={(user) => <UserItem user={user} onClick={(user) => navigate('/users/' + user.id)} key={user.id} />} />
 	)
 }
 

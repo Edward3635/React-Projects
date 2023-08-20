@@ -1,16 +1,16 @@
 import axios from 'axios';
 import React, { FC, useEffect, useState } from 'react'
-import { IUser } from '../types/types';
+import { IUser } from '../../types/types';
 import { useNavigate, useParams } from 'react-router-dom';
 
-interface UserItemPageParams {
+type UserItemPageParams = {
 	id: string;
 };
 
 const UserItemPage: FC = () => {
 
 	const [user, setUser] = useState<IUser | null>(null);
-	const params = useParams();
+	const params = useParams<UserItemPageParams>();
 	const navigate = useNavigate();
 
 	useEffect(() => { fetchUser() }, []);
