@@ -1,0 +1,54 @@
+.card {
+	border: 1px solid rgb(235, 234, 234);
+	position: relative;
+	&:hover {
+		cursor: pointer;
+		filter: brightness(90%);
+	}
+}
+
+.city {
+	font-weight: bold;
+	font-size: 14px;
+}
+.image {
+	max-width: 190px;
+	height: 126px;
+}
+.cardWrapper {
+	position: relative;
+}
+.imgRemoveTripWrapper {
+	background: #e6e6e6;
+	border-radius: 20px;
+	position: absolute;
+	top: 2px;
+	right: 3px;
+	z-index: 2;
+	border: 1px solid transparent;
+	&:hover {
+		cursor: pointer;
+		border: 1px solid red;
+	}
+	&:hover + div {
+		filter: brightness(90%);
+	}
+}
+
+.imgRemoveTrip {
+	max-width: 25px;
+}
+
+.description {
+	padding: 20px 15px;
+}
+
+.datetime {
+	font-size: 10px;
+	margin-top: 15px;
+	color: rgb(168, 161, 161);
+}
+.selected {
+	border-color: rgb(46, 136, 252);
+	filter: brightness(90%);
+}

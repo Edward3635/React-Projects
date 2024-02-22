@@ -1,0 +1,30 @@
+.tripInfo {
+	margin-top: 35px;
+	font-size: 20px;
+	max-width: 900px;
+}
+
+.daysOfWeek {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 40px;
+	padding-left: 10px;
+	padding-bottom: 30px;
+	row-gap: 30px;
+	column-gap: 20px;
+}
+.dayOfWeekWrapper {
+	width: 100%;
+	max-width: 90px;
+	text-align: center;
+	.dayOfWeek {
+		font-size: 16px;
+	}
+}
+
+.weatherIcon {
+	margin: 5px 0;
+}
+.temp {
+	text-align: center;
+}

@@ -1,0 +1,61 @@
+.forecastPreloader {
+	position: relative;
+}
+.cityForecast {
+	padding: 190px 20px 100px;
+	text-align: center;
+	width: 100%;
+	max-width: 365px;
+	height: 600px;
+	position: relative;
+	background: #8b4513 url("../../../img/commonIcons/figure1.svg") center top/ auto 70% no-repeat;
+	color: #fff;
+
+	.forecastInfo {
+		position: relative;
+		align-items: center;
+		justify-content: center;
+		gap: 5px;
+		margin-bottom: 150px;
+
+		.icon {
+			position: absolute;
+			top: 40px;
+			left: 50px;
+		}
+
+		h3 {
+			font-size: 24px;
+			margin-bottom: 25px;
+		}
+
+		.temp {
+			font-size: 50px;
+			margin-bottom: 20px;
+		}
+		.degreeWrapper {
+			position: relative;
+			width: fit-content;
+			margin: 0 auto;
+			> span {
+				display: block;
+			}
+			.degree {
+				position: absolute;
+				top: -11px;
+				right: -12px;
+				font-size: 40px;
+			}
+			.celsium {
+				position: absolute;
+				font-size: 20px;
+				top: -10px;
+				right: -26px;
+			}
+		}
+		.city {
+			font-size: 20px;
+			font-weight: 400;
+		}
+	}
+}

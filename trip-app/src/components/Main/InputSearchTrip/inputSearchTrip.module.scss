@@ -1,0 +1,20 @@
+.loupe {
+	max-width: 25px;
+	position: absolute;
+	top: 50%;
+	left: 12px;
+	transform: translateY(-50%);
+}
+.searchTripWrapper {
+	margin-top: 50px;
+	position: relative;
+	margin-bottom: 40px;
+}
+.searchTrip {
+	padding: 15px 15px 15px 45px;
+	background-color: rgb(240, 240, 240);
+	border-radius: 7px;
+	&::placeholder {
+		color: #000;
+	}
+}
