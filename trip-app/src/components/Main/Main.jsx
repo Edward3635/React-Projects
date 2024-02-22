@@ -51,7 +51,7 @@ const Main = () => {
 
 	useEffect(() => {
 		const parsedTrips = JSON.parse(localStorage.getItem('myTrips'));
-		if (parsedTrips.length) {
+		if (parsedTrips && parsedTrips.length) {
 			parsedTrips.forEach(trip => {
 				dispatch(addTrip({
 					city: trip.address,
