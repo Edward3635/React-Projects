@@ -1,11 +1,13 @@
-import { IUser } from './user';
+import { IUser } from './user'
 
 export interface IAuthState {
-	user: IUser,
+	user: IUser
 	isAuth: boolean
+	isLoading: boolean
+	error: string
 }
 
 export interface ILoginPayload {
-	email: string;
-	password: string;
+	email: string
+	password: string
 }
