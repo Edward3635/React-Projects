@@ -1,4 +1,4 @@
-import cl from 'style/App.module.scss'
+import cl from '../style/App.module.scss'
 import Main from './Main/Main';
 
 
