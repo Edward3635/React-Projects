@@ -1,0 +1,9 @@
+{
+	"extends": ["@wemake-services/typescript/recommended"],
+	"plugins": ["react"],
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	}
+}

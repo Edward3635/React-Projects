@@ -1,10 +1,13 @@
-import React from 'react';
+import React from 'react'
 import cl from '../style/App.module.scss'
+import TodoWrapper from './Todo/TodoWrapper'
 
-function App() {
+function App(): JSX.Element {
   return (
-		<div className={cl.app}>Todo</div>
-  );
+    <div className={cl.app}>
+      <TodoWrapper />
+    </div>
+  )
 }
 
-export default App;
+export default App

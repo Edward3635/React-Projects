@@ -1,5 +1,169 @@
 @import './reset';
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background: #8758ff;
+	display: flex;
+	justify-content: center;
+}
 
 .app {
-	color: red;
+	text-align: center;
+	padding-bottom: 2.5rem;
+
+	.todoWrapper {
+		background: #1a1a40;
+		margin-top: 2.5rem;
+		padding: 2rem;
+		border-radius: 5px;
+		position: relative;
+
+		.titleWrapper {
+			display: flex;
+			justify-content: center;
+			gap: 2rem;
+			.filterSelect {
+				text-align: center;
+				padding: 8px 12px;
+				font-size: 16px;
+				border-radius: 4px;
+				cursor: pointer;
+				color: #fff;
+				appearance: none;
+				background: linear-gradient(45deg, rgb(43, 52, 73), #8758ff);
+				> option {
+					background-color: #1a1a40;
+				}
+			}
+			.counter {
+				position: absolute;
+				top: 1rem;
+				right: 1rem;
+				color: #fff;
+				border-bottom: 3px solid red;
+			}
+		}
+
+		.todoForm {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			margin-bottom: 1rem;
+			.todoInput {
+				outline: none;
+				background: none;
+				border: 1px solid #8758ff;
+				padding: 0.5rem 1rem;
+				width: 300px;
+				color: #fff;
+				&::placeholder {
+					color: #ffffff4d;
+				}
+			}
+			.editInput {
+				width: 280px;
+			}
+			.btnsWrapper {
+				display: flex;
+				align-items: center;
+				justify-content: space-evenly;
+				background: #8758ff;
+				width: 98px;
+				.closeIconWrapper {
+					padding: 11px 0;
+					flex-grow: 1;
+					&:hover {
+						cursor: pointer;
+					}
+					&:hover .close {
+						color: silver;
+					}
+				}
+				.close {
+					color: white;
+				}
+			}
+		}
+
+		.todo {
+			position: relative;
+
+			.todoContent {
+				max-width: 378px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				background: #8758ff;
+				padding: 0.75rem 1rem;
+				padding-right: 4rem;
+				border-radius: 5px;
+				margin-bottom: 1rem;
+				&:hover {
+					cursor: pointer;
+				}
+				> p {
+					text-align: start;
+				}
+			}
+
+			.incompleted {
+				color: #fff;
+				cursor: pointer;
+			}
+
+			.completed {
+				color: #c5aeff;
+				text-decoration: line-through;
+				cursor: pointer;
+			}
+
+			.iconsWrapper {
+				position: absolute;
+				display: flex;
+				gap: 10px;
+				top: 0.75rem;
+				right: 1rem;
+				color: #fff;
+			}
+
+			.editIcon:hover {
+				cursor: pointer;
+				color: rgb(49, 49, 186);
+			}
+
+			.deleteIcon:hover {
+				cursor: pointer;
+				color: red;
+			}
+		}
+
+		.faTrash {
+			margin-left: 0.75rem;
+		}
+	}
+
+	.todoBtn {
+		background: #8758ff;
+		color: #fff;
+		border: none;
+		padding: 0.55rem;
+		cursor: pointer;
+	}
+	.disabled {
+		filter: brightness(0.8);
+		&:hover {
+			cursor: not-allowed;
+		}
+	}
+
+	.updateBtn {
+		border-right: 2px solid black;
+	}
+}
+
+h1 {
+	color: #fff;
+	margin-bottom: 1.5rem;
+	font-size: 1.75rem;
 }
